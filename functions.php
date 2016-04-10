@@ -135,6 +135,20 @@ if ( ! function_exists( 'eal4th_cart_link' ) ) {
 	}
 }
 
+if ( ! function_exists( 'eal4th_cart_link_fragment' ) ) {
+	function eal4th_cart_link_fragment( $fragments ) {
+		global $woocommerce;
+
+		ob_start();
+
+		eal4th_cart_link();
+
+		$fragments['a.cart-contents'] = ob_get_clean();
+
+		return $fragments;
+	}
+}
+
 if ( ! function_exists( 'eal4th_header_cart' ) ) {
 	function eal4th_header_cart() {
 			if ( is_cart() ) {
@@ -154,6 +168,12 @@ if ( ! function_exists( 'eal4th_header_cart' ) ) {
 		<?php
 
 	}
+}
+
+if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
+	add_filter( 'woocommerce_add_to_cart_fragments', 'eal4th_cart_link_fragment' );
+} else {
+	add_filter( 'add_to_cart_fragments', 'eal4th_cart_link_fragment' );
 }
 
 add_action( 'eal4th_header', 'eal4th_primary_navigation',		50 );
