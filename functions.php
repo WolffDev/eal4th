@@ -98,6 +98,69 @@ function eal4th_content_width() {
 }
 add_action( 'after_setup_theme', 'eal4th_content_width', 0 );
 
+/**********************************************
+ ******* Testing wooCommerce header cart ******
+ *********************************************/
+
+if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
+	/**
+	 * Display Primary Navigation
+	 * @since  1.0.0
+	 * @return void
+	 */
+	function eal4th_primary_navigation() {
+		?>
+		<nav id="site-navigation" class="main-navigation" role="navigation"
+			<button class="menu-toggle"</button>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location'	=> 'primary',
+					'container_class'	=> 'primary-navigation',
+					)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+		<?php
+	}
+}
+
+if ( ! function_exists( 'eal4th_cart_link' ) ) {
+	function eal4th_cart_link() {
+		?>
+			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'eal4th' ); ?>">
+				<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?></span>
+			</a>
+		<?php
+	}
+}
+
+if ( ! function_exists( 'eal4th_header_cart' ) ) {
+	function eal4th_header_cart() {
+			if ( is_cart() ) {
+				$class = 'current-menu-item';
+			} else {
+				$class = '';
+			}
+		?>
+		<ul class="site-header-cart menu">
+			<li class="cart-short-list">
+				<?php eal4th_cart_link(); ?>
+			</li>
+			<li class="cart-long-list">
+				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+			</li>
+		</ul>
+		<?php
+
+	}
+}
+
+add_action( 'eal4th_header', 'eal4th_primary_navigation',		50 );
+add_action( 'eal4th_header', 'eal4th_header_cart', 		60 );
+
+
+
 /**
  * Register widget area.
  *
