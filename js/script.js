@@ -1,9 +1,5 @@
 jQuery(document).ready(function($){
-  $(".site-header-cart").on('mouseenter', function(){
-    $(this).find('.cart-long-list').slideDown().addClass('cart-hover');
-  });
-
-  $(".site-header-cart").on('mouseleave', function(){
-    $(this).find('.cart-long-list').slideUp();
+  $(".site-header-cart").on('hover', function(){
+    $(this).find('.cart-long-list').toggleClass('cart-hover');
   });
 });
