@@ -25,3 +25,12 @@ Normalize
 /**********************
 Imports
 **********************/
+.cart-long-list {
+  display: none;
+}
+
+.cart-hover {
+  display: block;
+  position: absolute;
+  z-index: 10;
+}

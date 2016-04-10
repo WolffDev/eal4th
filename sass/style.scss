@@ -30,3 +30,13 @@ Imports
 @import "my-components/header";
 @import "my-components/content";
 @import "my-components/footer";
+
+.cart-long-list {
+  display: none;
+}
+
+.cart-hover {
+  display: block;
+  position: absolute;
+  z-index: 10;
+}
