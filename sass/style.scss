@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
 Theme Name: eal4th
 Theme URI: http://artea.dk/
@@ -11,6 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: eal4th
 Tags:
 */
+
 /**********************
 Normalize
 **********************/
@@ -23,3 +23,8 @@ Normalize
 /**********************
 Imports
 **********************/
+@import "components/varibles";
+@import "components/mixins";
+@import "components/header";
+@import "components/content";
+@import "components/footer";

@@ -35,6 +35,12 @@ function eal4th_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 
+
+	/*
+	 * Add theme support for woocommerce
+	 */
+	add_theme_support( 'woocommerce' );
+
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
