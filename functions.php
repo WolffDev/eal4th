@@ -110,16 +110,33 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 	 */
 	function eal4th_primary_navigation() {
 		?>
-		<nav id="site-navigation" class="main-navigation" role="navigation"
-			<button class="menu-toggle"</button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location'	=> 'primary',
-					'container_class'	=> 'primary-navigation',
-					)
-			);
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="nav-wrapper">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'	=> 'primary',
+						'container_class'	=> 'primary-navigation',
+						)
+				);
+				if ( is_cart() ) {
+					$class = 'current-menu-item';
+				} else {
+					$class = '';
+				}
 			?>
+			<ul class="site-header-cart menu">
+				<li class="cart-short-list">
+					<?php eal4th_cart_link(); ?>
+					<ul class="cart-long-list">
+						<li>
+							<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			</div>
 		</nav><!-- #site-navigation -->
 		<?php
 	}
@@ -149,26 +166,12 @@ if ( ! function_exists( 'eal4th_cart_link_fragment' ) ) {
 	}
 }
 
-if ( ! function_exists( 'eal4th_header_cart' ) ) {
-	function eal4th_header_cart() {
-			if ( is_cart() ) {
-				$class = 'current-menu-item';
-			} else {
-				$class = '';
-			}
-		?>
-		<ul class="site-header-cart menu">
-			<li class="cart-short-list">
-				<?php eal4th_cart_link(); ?>
-			</li>
-			<li class="cart-long-list">
-				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-			</li>
-		</ul>
-		<?php
-
-	}
-}
+// if ( ! function_exists( 'eal4th_header_cart' ) ) {
+// 	function eal4th_header_cart() {
+//
+//
+// 	}
+// }
 
 if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 	add_filter( 'woocommerce_add_to_cart_fragments', 'eal4th_cart_link_fragment' );
@@ -177,7 +180,7 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 }
 
 add_action( 'eal4th_header', 'eal4th_primary_navigation',		50 );
-add_action( 'eal4th_header', 'eal4th_header_cart', 		60 );
+// add_action( 'eal4th_header', 'eal4th_header_cart', 		50 );
 
 
 
@@ -203,11 +206,17 @@ add_action( 'widgets_init', 'eal4th_widgets_init' );
  * Enqueue scripts and styles.
  */
 function eal4th_scripts() {
+	wp_enqueue_style( 'eal4th-materialize-style' , get_template_directory_uri() . '/sass/materialize.css' );
+
 	wp_enqueue_style( 'eal4th-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'eal4th-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'googleAnalytics', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
+	wp_enqueue_script( 'eal4th-script', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'eal4th-matrialize-init', get_template_directory_uri() . '/js/materialize-init.js', array(), '20151215', true );
+
+
 
 	wp_enqueue_script( 'googleAnalytics', get_template_directory_uri() . '/js/googleAnalytics.js', array(), '20151215', true );
 
