@@ -25,7 +25,7 @@ function eal4th_setup() {
 	load_theme_textdomain( 'eal4th', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+	//add_theme_support( 'automatic-feed-links' );
 
 	/*
 	 * Let WordPress manage the document title.
@@ -57,31 +57,31 @@ function eal4th_setup() {
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+	// add_theme_support( 'html5', array(
+	// 	'search-form',
+	// 	'comment-form',
+	// 	'comment-list',
+	// 	'gallery',
+	// 	'caption',
+	// ) );
 
 	/*
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+	// add_theme_support( 'post-formats', array(
+	// 	'aside',
+	// 	'image',
+	// 	'video',
+	// 	'quote',
+	// 	'link',
+	// ) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'eal4th_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'eal4th_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'eal4th_setup' );
