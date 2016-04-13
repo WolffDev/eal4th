@@ -39,4 +39,28 @@ Imports
   display: block;
   position: absolute;
   z-index: 10;
+  .widget_shopping_cart_content {
+    background-color: lightblue;
+    width: 240px;
+    padding: 10px;
+    .total {
+      border-top: none;
+    }
+    a.remove:before {
+    content: "\f057";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #e2401c;
+    text-indent: 0;
+    text-align: center;
+    }
+    a.remove, a.remove:before {
+        line-height: 1.618;
+        font-weight: 400;
+    }
+  }
 }
