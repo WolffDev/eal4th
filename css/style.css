@@ -14,7 +14,7 @@ Tags:
 /**********************
 Normalize
 **********************/
-* {
+*, *::before, *::after {
   margin: 0;
   border: 0;
   box-sizing: border-box;
@@ -23,8 +23,11 @@ Normalize
 }
 
 /**********************
-Imports
-**********************/
+ * Imports
+ *********************/
+/**********************
+ * Nav header cart
+ *********************/
 .cart-long-list {
   display: none;
 }
@@ -57,4 +60,17 @@ Imports
 .cart-hover .widget_shopping_cart_content a.remove, .cart-hover .widget_shopping_cart_content a.remove:before {
   line-height: 1.618;
   font-weight: 400;
+}
+
+/**********************
+ * Vote gallery
+ *********************/
+.gallery-vote {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.gallery-vote .gallery-icon img {
+  width: 100%;
+  height: auto;
 }
