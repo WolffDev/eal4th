@@ -27,6 +27,13 @@ Normalize
  * Imports
  *********************/
 /**********************
+ * Header cart, widget
+ *********************/
+.cart-hover .widget_shopping_cart_content {
+  min-height: 80px;
+}
+
+/**********************
  * Nav header cart
  *********************/
 .cart-long-list {
