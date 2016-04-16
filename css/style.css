@@ -14,9 +14,10 @@ Tags:
 /**********************
 Normalize
 **********************/
-*, *::before, *::after {
+* {
   margin: 0;
   border: 0;
+  padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
@@ -69,6 +70,10 @@ Normalize
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+.gallery-vote .vote-count {
+  display: flex;
+  justify-content: center;
 }
 .gallery-vote .gallery-icon img {
   width: 100%;
