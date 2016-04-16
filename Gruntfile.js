@@ -25,8 +25,8 @@ module.exports = function(grunt) {
            sourcemap: 'none',
          },
          files: {
-           'css/style.min.css': 'sass/style.scss'/*,
-           'sass/materialize.css': 'sass/materialize.scss'*/
+           'css/style.min.css': 'sass/style.scss',
+           'sass/materialize.css': 'sass/materialize.scss'
          }
        }
      },

@@ -1,4 +1,11 @@
 /**********************
+ * Nav
+ *********************/
+.main-navigation ul li {
+  display: inline-block;
+}
+
+/**********************
  * Header cart, widget
  *********************/
 .cart-hover .widget_shopping_cart_content {
@@ -8,8 +15,14 @@
 /**********************
  * Nav header cart
  *********************/
+ span i.material-icons {
+   vertical-align: middle;
+ }
 .cart-long-list {
   display: none;
+}
+.inline-flex {
+  display: inline-flex;
 }
 
 .cart-hover {
@@ -24,8 +37,6 @@
       border-top: none;
     }
     a.remove:before {
-    content: "\f057";
-    font-family: FontAwesome;
     position: absolute;
     top: 0;
     left: 0;

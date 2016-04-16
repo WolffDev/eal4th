@@ -31,22 +31,3 @@ Normalize
 @import "my-components/_header";
 @import "my-components/_content";
 @import "my-components/_footer";
-
-
-
-/**********************
- * Vote gallery
- *********************/
-.gallery-vote {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  .vote-count {
-    display: flex;
-    justify-content: center;
-  }
-  .gallery-icon img {
-    width: 100%;
-    height: auto;
-  }
-}

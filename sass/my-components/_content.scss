@@ -1,0 +1,34 @@
+/**********************
+ * General
+ *********************/
+
+/**********************
+ * Hide big/small
+ *********************/
+@media screen and (min-width: $break__mobile) {
+  .hide-big {
+    display: none;
+  }
+}
+@media screen and (max-width: $break__mobile) {
+  .hide-small {
+    display: none;
+  }
+}
+
+/**********************
+ * Vote gallery
+ *********************/
+.gallery-vote {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  .vote-count {
+    display: flex;
+    justify-content: center;
+  }
+  .gallery-icon img {
+    width: 100%;
+    height: auto;
+  }
+}

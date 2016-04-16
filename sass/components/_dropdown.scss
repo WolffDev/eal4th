@@ -1,5 +1,11 @@
+$dropdown-bg-color: #000;
+$dropdown-hover-bg-color: grey;
+$off-black: lightgreen;
+$dropdown-color: crimson;
+$dropdown-item-height: 30px;
+
+
 .dropdown-content {
-  @extend .z-depth-1;
   background-color: $dropdown-bg-color;
   margin: 0;
   display: none;

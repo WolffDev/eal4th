@@ -11,7 +11,7 @@ nav {
   i,
   [class^="mdi-"], [class*="mdi-"],
   i.material-icons {
-    display: block;
+    display: inline;
     font-size: 2rem;
     height: $navbar-height-mobile;
     line-height: $navbar-height-mobile;
@@ -96,7 +96,7 @@ nav {
       transition: background-color .3s;
       font-size: 1rem;
       color: $navbar-font-color;
-      display: inline-block;
+      display: block;
       padding: 0 15px;
       cursor: pointer;
 
@@ -107,7 +107,7 @@ nav {
       }
 
       &:hover {
-        background-color: rgba(0,0,0,.1);
+        background-color: rgba(255,171,64,.8);
       }
     }
 

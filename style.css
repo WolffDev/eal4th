@@ -27,6 +27,13 @@ Normalize
  * Imports
  *********************/
 /**********************
+ * Nav
+ *********************/
+.main-navigation ul li {
+  display: inline-block;
+}
+
+/**********************
  * Header cart, widget
  *********************/
 .cart-hover .widget_shopping_cart_content {
@@ -36,8 +43,19 @@ Normalize
 /**********************
  * Nav header cart
  *********************/
+span i.material-icons {
+  vertical-align: middle;
+}
+
 .cart-long-list {
   display: none;
+}
+
+.inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .cart-hover {
@@ -54,8 +72,6 @@ Normalize
   border-top: none;
 }
 .cart-hover .widget_shopping_cart_content a.remove:before {
-  content: "\f057";
-  font-family: FontAwesome;
   position: absolute;
   top: 0;
   left: 0;
@@ -70,6 +86,22 @@ Normalize
   font-weight: 400;
 }
 
+/**********************
+ * General
+ *********************/
+/**********************
+ * Hide big/small
+ *********************/
+@media screen and (min-width: 768px) {
+  .hide-big {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hide-small {
+    display: none;
+  }
+}
 /**********************
  * Vote gallery
  *********************/

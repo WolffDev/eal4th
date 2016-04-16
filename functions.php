@@ -51,6 +51,7 @@ function eal4th_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'eal4th' ),
+		'mobile' => esc_html__( 'Mobil', 'eal4th' ),
 	) );
 
 	/*
@@ -99,7 +100,7 @@ function eal4th_content_width() {
 add_action( 'after_setup_theme', 'eal4th_content_width', 0 );
 
 /**********************************************
- ******* Testing wooCommerce header cart ******
+ ******* wooCommerce header cart ******
  *********************************************/
 
 if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
@@ -110,43 +111,90 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 	 */
 	function eal4th_primary_navigation() {
 		?>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="nav-wrapper">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'	=> 'primary',
-						'container_class'	=> 'primary-navigation',
-						)
-				);
-				if ( is_cart() ) {
-					$class = 'current-menu-item';
-				} else {
-					$class = '';
-				}
-			?>
-			<ul class="site-header-cart menu">
-				<li class="cart-short-list">
-					<?php eal4th_cart_link(); ?>
-					<ul class="cart-long-list">
-						<li>
-							<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-						</li>
-					</ul>
-				</li>
-			</ul>
+		<div class="hide-on-small-only">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="nav-wrapper">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'	=> 'primary',
+							'container_class'	=> 'primary-navigation',
+							)
+					);
+					if ( is_cart() ) {
+						$class = 'current-menu-item';
+					} else {
+						$class = '';
+					}
+				?>
+				<ul class="site-header-cart menu">
+					<li class="cart-short-list">
+						<?php eal4th_cart_link(); ?>
+						<ul class="cart-long-list">
+							<li>
+								<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+							</li>
+						</ul>
+					</li>
+				</ul>
 
-			</div>
-		</nav><!-- #site-navigation -->
+				</div>
+			</nav><!-- #site-navigation -->
+		</div>
 		<?php
 	}
 }
 
+if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
+	/**
+	 * Display Primary Navigation
+	 * @since  1.0.0
+	 * @return void
+	 */
+	function eal4th_mobile_navigation() {
+		?>
+		<div class="hide-on-med-and-up">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="nav-wrapper">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'	=> 'mobile',
+							'container_class'	=> 'mobile-navigation',
+							)
+					);
+					if ( is_cart() ) {
+						$class = 'current-menu-item';
+					} else {
+						$class = '';
+					}
+				?>
+				<ul class="site-header-cart menu">
+					<li class="cart-short-list">
+						<?php eal4th_cart_link(); ?>
+						<ul class="cart-long-list">
+							<li>
+								<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				</div>
+			</nav><!-- #site-navigation -->
+		</div>
+		<?php
+	}
+}
+
+
 if ( ! function_exists( 'eal4th_cart_link' ) ) {
 	function eal4th_cart_link() {
 		?>
-			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'eal4th' ); ?>">
-				<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?></span>
+			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'Vis din indkøbskurv', 'eal4th' ); ?>">
+				<span class="amount hide-on-small-and-down"><i class="material-icons">shopping_cart</i><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span>  <span class="count hide-on-small-and-down"> <?php echo wp_kses_data( sprintf( _n( '%d stk', '%d stk\'s', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?></span>
+				<span class="count hide-on-med-and-up"><?php echo wp_kses_data( sprintf( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?><i class="material-icons">shopping_cart</i></span>
+
 			</a>
 		<?php
 	}
@@ -180,6 +228,7 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 }
 
 add_action( 'eal4th_header', 'eal4th_primary_navigation',		50 );
+add_action( 'eal4th_mobile', 'eal4th_mobile_navigation',		50 );
 // add_action( 'eal4th_header', 'eal4th_header_cart', 		50 );
 
 
@@ -210,13 +259,14 @@ function eal4th_scripts() {
 
 	wp_enqueue_style( 'eal4th-style', get_stylesheet_uri() );
 
+
 	// wp_enqueue_script( 'eal4th-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'eal4th-script', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'matrialize-script', get_template_directory_uri() . '/js/matrialize.min.js', array(), '20151215', true );
+
 	wp_enqueue_script( 'eal4th-matrialize-init', get_template_directory_uri() . '/js/materialize-init.js', array(), '20151215', true );
-
-
 
 	wp_enqueue_script( 'googleAnalytics', get_template_directory_uri() . '/js/googleAnalytics.js', array(), '20151215', true );
 
