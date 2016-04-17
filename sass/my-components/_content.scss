@@ -1,6 +1,17 @@
 /**********************
  * General
  *********************/
+.content-area {
+  width: 100%;
+  .top-image {
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.site-main {
+  margin: 0 20px;
+}
 
 /**********************
  * Vote gallery

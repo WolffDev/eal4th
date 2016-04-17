@@ -6,24 +6,23 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+		<div class="top-image" style="background-image: url(<?php echo get_template_directory_uri() . '/img/top-image.jpeg';?>)">
+		</div>
 		<main id="main" class="site-main" role="main">
+			<div class="abb-ref-link">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. At amet, atque labore quo, unde deleniti quidem quaerat illum nam, possimus modi facere. Necessitatibus quam animi alias ratione recusandae. Soluta pariatur modi recusandae reiciendis dolorem, ratione, provident ipsum animi quae saepe esse. Magni deserunt consectetur quibusdam cumque quia architecto, voluptatem repudiandae sit mollitia explicabo unde. Quos minima, atque quae odio quod dolorum, ullam nihil dolorem, harum beatae sint commodi eius id nulla repellendus repellat! Dolorum asperiores magnam saepe eligendi, deleniti sint facere accusantium architecto dicta neque laboriosam rem ad et nemo totam beatae aliquam impedit harum iste veniam eaque! Asperiores, perferendis.
+				</p>
+			</div>
+			<div class="user-select">
+				<?php
 
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
+				?>
+			</div>
+			<div class="qoute-users"></div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

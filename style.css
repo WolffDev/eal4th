@@ -1021,6 +1021,10 @@ td, th {
 /**********************
  * Nav header cart
  *********************/
+.site-header-cart {
+  padding: 10px;
+}
+
 span i.material-icons {
   vertical-align: middle;
 }
@@ -1072,6 +1076,19 @@ span i.material-icons {
 /**********************
  * General
  *********************/
+.content-area {
+  width: 100%;
+}
+.content-area .top-image {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.site-main {
+  margin: 0 20px;
+}
+
 /**********************
  * Vote gallery
  *********************/
