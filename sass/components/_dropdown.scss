@@ -2,14 +2,14 @@ $dropdown-bg-color: #000;
 $dropdown-hover-bg-color: grey;
 $off-black: lightgreen;
 $dropdown-color: crimson;
-$dropdown-item-height: 30px;
+$dropdown-item-height: 60px;
 
 
 .dropdown-content {
   background-color: $dropdown-bg-color;
   margin: 0;
   display: none;
-  min-width: 100px;
+  min-width: 120px !important;
   max-height: 650px;
   overflow-y: auto;
   opacity: 0;

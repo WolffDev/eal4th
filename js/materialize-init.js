@@ -1,7 +1,14 @@
 (function($){
   $(function(){
 
-    $(".dropdown-button").dropdown();
+    $(".dropdown-button").dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      hover: false,
+      belowOrigin: true,
+      alignment: 'right'
+      }
+    );
 
     // smooth scroll on same page
     $('a[href*=#]:not([href=#])').click(function() {

@@ -26,7 +26,7 @@ module.exports = function(grunt) {
          },
          files: {
            'css/style.min.css': 'sass/style.scss',
-           'sass/materialize.css': 'sass/materialize.scss'
+          //  'sass/materialize.css': 'sass/materialize.scss',
          }
        }
      },

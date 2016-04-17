@@ -14,21 +14,10 @@ Tags:
 /**********************
  * Imports
  *********************/
-@import "my-components/_varibles.scss";
-@import "my-components/_mixins";
-@import "my-components/_header";
-@import "my-components/_content";
-@import "my-components/_footer";
-
-/**********************
-Normalize
-**********************/
-*, *::before, *::after {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  @include font-size(1);
-}
+@import "materialize";
+@import "my-components/varibles";
+@import "my-components/mixins";
+@import "my-components/normalize";
+@import "my-components/header";
+@import "my-components/content";
+@import "my-components/footer";

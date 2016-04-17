@@ -156,6 +156,11 @@ if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 		<div class="hide-on-med-and-up">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="nav-wrapper-mobile">
+					<div class="header-mobile-logo">
+						<a href="#">
+							<img src="<?php echo get_template_directory_uri() . '/img/header_mobile_logo.png';?>" alt="header mobile logo">
+						</a>
+					</div>
 					<ul class="site-header-cart menu">
 						<li class="cart-short-list">
 							<?php eal4th_cart_link(); ?>
@@ -195,7 +200,7 @@ if ( ! function_exists( 'eal4th_cart_link' ) ) {
 		?>
 			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'Vis din indkøbskurv', 'eal4th' ); ?>">
 				<span class="amount hide-on-small-and-down"><i class="material-icons">shopping_cart</i><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span>  <span class="count hide-on-small-and-down"> <?php echo wp_kses_data( sprintf( _n( '%d stk', '%d stk\'s', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?></span>
-				<span class="count hide-on-med-and-up"><?php echo wp_kses_data( sprintf( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?><i class="material-icons">shopping_cart</i></span>
+				<span class="count hide-on-med-and-up"><?php echo wp_kses_data( sprintf( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?><i class="material-icons cart-icon">shopping_cart</i></span>
 
 			</a>
 		<?php
