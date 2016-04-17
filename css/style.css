@@ -889,10 +889,15 @@ td, th {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 *:focus {
   outline: none;
+}
+
+.site-header {
+  width: 100%;
 }
 
 /**********************
@@ -1064,4 +1069,17 @@ span i.material-icons {
 .gallery-vote .gallery-icon img {
   width: 100%;
   height: auto;
+}
+
+.site-footer {
+  width: 100vw;
+  background-color: #f0f0f0;
+  min-height: 350px;
+}
+.site-footer .site-info {
+  padding: 50px 25px 0;
+}
+.site-footer .site-info p, .site-footer .site-info a {
+  font-size: 20.8px;
+  font-size: 1.3rem;
 }

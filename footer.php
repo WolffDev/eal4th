@@ -15,10 +15,15 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'eal4th' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'eal4th' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'eal4th' ), 'eal4th', '<a href="http://underscores.me/" rel="designer">Camilla Albrechtsen, Frederik Tingkær & David Wolff</a>' ); ?>
-      <div class="test">TESTER BIG TIME MED NY BRANCH</div>
+			<p>
+				Artea ApS<br>
+				Kardemommegade 13 B<br>
+				Transaktionsbyen 5100<br>
+				<br>
+				<a href="tel:+4530401020">+45 3040 1020</a><br>
+				<a href="mailto:info@artea.dk?subject:Kontakt">info@artea.dk</a>
+
+			</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

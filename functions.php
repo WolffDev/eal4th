@@ -157,7 +157,7 @@ if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="nav-wrapper-mobile">
 					<div class="header-mobile-logo">
-						<a href="#">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<img src="<?php echo get_template_directory_uri() . '/img/header_mobile_logo.png';?>" alt="header mobile logo">
 						</a>
 					</div>
