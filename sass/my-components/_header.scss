@@ -99,6 +99,9 @@
  span i.material-icons {
    vertical-align: middle;
  }
+ .cart-short-list {
+   position: relative;
+ }
 .cart-long-list {
   display: none;
 }
@@ -110,10 +113,12 @@
   display: block;
   position: absolute;
   z-index: 10;
+  right: 0;
   .widget_shopping_cart_content {
-    background-color: lightblue;
-    width: 240px;
+    background-color: $dropdown-bg-color;
+    min-width: 200px;
     padding: 10px;
+    @extend .z-depth-1;
     .total {
       border-top: none;
     }

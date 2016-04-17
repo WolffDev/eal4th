@@ -24,67 +24,67 @@ video.responsive-video {
 /*********************
   Media Query Classes
 **********************/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   .hide-on-small-only, .hide-on-small-and-down {
     display: none !important;
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 802px) {
   .hide-on-med-and-down {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 551px) {
   .hide-on-med-and-up {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 550px) and (max-width: 802px) {
   .hide-on-med-only {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 803px) {
   .hide-on-large-only {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 803px) {
   .show-on-large {
     display: block !important;
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 550px) and (max-width: 802px) {
   .show-on-medium {
     display: block !important;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   .show-on-small {
     display: block !important;
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 551px) {
   .show-on-medium-and-up {
     display: block !important;
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 802px) {
   .show-on-medium-and-down {
     display: block !important;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   .center-on-small-only {
     text-align: center;
   }
@@ -129,7 +129,7 @@ td, th {
   border-radius: 2px;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 802px) {
   table.responsive-table {
     width: 100%;
     border-collapse: collapse;
@@ -208,7 +208,7 @@ td, th {
 }
 
 .z-depth-1, .nav-wrapper .dropdown-content,
-.nav-wrapper-mobile .dropdown-content {
+.nav-wrapper-mobile .dropdown-content, .cart-hover .widget_shopping_cart_content {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -238,12 +238,12 @@ td, th {
   width: 90%;
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 551px) {
   .container {
     width: 85%;
   }
 }
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 803px) {
   .container {
     width: 75%;
   }
@@ -465,7 +465,7 @@ td, th {
 .row .col.push-s12 {
   left: 100%;
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 551px) {
   .row .col.m1 {
     width: 8.33333%;
     margin-left: auto;
@@ -647,7 +647,7 @@ td, th {
     left: 100%;
   }
 }
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 803px) {
   .row .col.l1 {
     width: 8.33333%;
     margin-left: auto;
@@ -1005,6 +1005,10 @@ span i.material-icons {
   vertical-align: middle;
 }
 
+.cart-short-list {
+  position: relative;
+}
+
 .cart-long-list {
   display: none;
 }
@@ -1017,10 +1021,11 @@ span i.material-icons {
   display: block;
   position: absolute;
   z-index: 10;
+  right: 0;
 }
 .cart-hover .widget_shopping_cart_content {
-  background-color: lightblue;
-  width: 240px;
+  background-color: #fff;
+  min-width: 200px;
   padding: 10px;
 }
 .cart-hover .widget_shopping_cart_content .total {
