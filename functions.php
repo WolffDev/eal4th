@@ -155,31 +155,33 @@ if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 		?>
 		<div class="hide-on-med-and-up">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="nav-wrapper">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location'	=> 'mobile',
-							'container_class'	=> 'mobile-navigation',
-							)
-					);
-					if ( is_cart() ) {
-						$class = 'current-menu-item';
-					} else {
-						$class = '';
-					}
-				?>
-				<ul class="site-header-cart menu">
-					<li class="cart-short-list">
-						<?php eal4th_cart_link(); ?>
-						<ul class="cart-long-list">
-							<li>
-								<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-							</li>
-						</ul>
-					</li>
-				</ul>
-
+				<div class="nav-wrapper-mobile">
+					<ul class="site-header-cart menu">
+						<li class="cart-short-list">
+							<?php eal4th_cart_link(); ?>
+							<ul class="cart-long-list">
+								<li>
+									<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<a href="#"><i data-activates="dropdown1" class="material-icons dropdown-button">menu</i></a>
+					<div id="dropdown1" class="dropdown-content">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location'	=> 'mobile',
+								'container_class'	=> 'mobile-navigation',
+								)
+						);
+						if ( is_cart() ) {
+							$class = 'current-menu-item';
+						} else {
+							$class = '';
+						}
+						?>
+					</div>
 				</div>
 			</nav><!-- #site-navigation -->
 		</div>
@@ -264,7 +266,7 @@ function eal4th_scripts() {
 
 	wp_enqueue_script( 'eal4th-script', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'matrialize-script', get_template_directory_uri() . '/js/matrialize.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'matrialize-script', get_template_directory_uri() . '/js/materialize.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'eal4th-matrialize-init', get_template_directory_uri() . '/js/materialize-init.js', array(), '20151215', true );
 

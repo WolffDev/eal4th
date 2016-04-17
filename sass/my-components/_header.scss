@@ -1,6 +1,12 @@
 /**********************
  * Nav
  *********************/
+.nav-wrapper,
+.nav-wrapper-mobile {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: flex-end;
+}
 .main-navigation ul li {
   display: inline-block;
 }

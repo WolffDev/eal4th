@@ -12,23 +12,18 @@ Text Domain: eal4th
 Tags:
 */
 /**********************
-Normalize
-**********************/
-* {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
-
-/**********************
  * Imports
  *********************/
 /**********************
  * Nav
  *********************/
+.nav-wrapper,
+.nav-wrapper-mobile {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
 .main-navigation ul li {
   display: inline-block;
 }
@@ -87,19 +82,6 @@ span i.material-icons {
  * General
  *********************/
 /**********************
- * Hide big/small
- *********************/
-@media screen and (min-width: 768px) {
-  .hide-big {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hide-small {
-    display: none;
-  }
-}
-/**********************
  * Vote gallery
  *********************/
 .gallery-vote {
@@ -114,4 +96,18 @@ span i.material-icons {
 .gallery-vote .gallery-icon img {
   width: 100%;
   height: auto;
+}
+
+/**********************
+Normalize
+**********************/
+*, *::before, *::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+  font-size: 1rem;
 }

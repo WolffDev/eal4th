@@ -3,20 +3,6 @@
  *********************/
 
 /**********************
- * Hide big/small
- *********************/
-@media screen and (min-width: $break__mobile) {
-  .hide-big {
-    display: none;
-  }
-}
-@media screen and (max-width: $break__mobile) {
-  .hide-small {
-    display: none;
-  }
-}
-
-/**********************
  * Vote gallery
  *********************/
 .gallery-vote {
