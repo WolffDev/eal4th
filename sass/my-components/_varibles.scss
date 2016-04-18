@@ -1,9 +1,10 @@
-$color__1:rgb(212, 144, 206);
-$color__2:rgb(148, 101, 144);
-$color__3:rgb(84, 57, 82);
-$color__4:rgb(71, 49, 70);
-$color__5:rgb(54, 36, 52);
-$color__text:#3a3637;
+$color__1: rgb(212, 144, 206);
+$color__2: rgb(148, 101, 144);
+$color__3: rgb(84, 57, 82);
+$color__4: rgb(71, 49, 70);
+$color__5: rgb(54, 36, 52);
+$color__text: #3a3637;
+$color__text_white: #fff;
 $color__background_grey: #f0f0f0;
 
 $dropdown-bg-color: #fff;
@@ -11,3 +12,17 @@ $dropdown-hover-bg-color: lighten($color__1, 20%);
 $off-black: lightgreen;
 $dropdown-color: $color__text;
 $dropdown-item-height: 60px;
+
+@font-face {
+  font-family: centuryGothic;
+  src: url(fonts/century-gothic/century-gothic.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: centuryGothicBold;
+  src: url(fonts/century-gothic/century-gothic-bold.ttf);
+  font-weight: 700;
+}
+
+$font__main: centuryGothic;
+$font__bold: centuryGothicBold;

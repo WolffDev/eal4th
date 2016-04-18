@@ -879,6 +879,16 @@ td, th {
   line-height: inherit;
 }
 
+@font-face {
+  font-family: centuryGothic;
+  src: url(fonts/century-gothic/century-gothic.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: centuryGothicBold;
+  src: url(fonts/century-gothic/century-gothic-bold.ttf);
+  font-weight: 700;
+}
 *, *::before, *::after {
   margin: 0;
   border: 0;
@@ -889,7 +899,7 @@ td, th {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: centuryGothic, sans-serif;
 }
 
 *:focus {
@@ -1091,23 +1101,44 @@ span i.material-icons {
  * Forside
  *********************/
 .top-image {
-  height: 400px;
+  height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.abb-ref-link,
+.text-vh-align {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
 .user-select,
 .quote-users {
   min-height: 400px;
 }
 
 .abb-ref-link {
-  background-color: crimson;
+  height: 120px;
+  background-image: url(http://www.lorempixel.com/400/150/);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.abb-ref-link div {
+  height: 120px;
+}
+.abb-ref-link p {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  font-family: centuryGothicBold;
+  position: relative;
+  color: #fff;
 }
 
-.user-select {
-  background-color: limegreen;
+.user-select p {
+  font-size: 22.4px;
+  font-size: 1.4rem;
 }
 
 .quote-users {

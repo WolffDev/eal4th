@@ -7,7 +7,7 @@
   list-style: none;
   @include font-size(1);
   line-height: 1;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $font__main, sans-serif;
 }
 *:focus {
   outline: none;

@@ -10,10 +10,20 @@ get_header(); ?>
 		</div>
 		<main id="main" class="site-main" role="main">
 			<div class="abb-ref-link">
+				<div class="text-vh-align">
+					<p>
+						Se abonnementsløsninger
+					</p>
+				</div>
 			</div>
 			<div class="user-select">
+				<div class="text-vh-align">
+					<p>
+						Følgerne har valgt
+					</p>
+				</div>
 				<?php
-					
+
 				?>
 			</div>
 			<div class="quote-users"></div>
