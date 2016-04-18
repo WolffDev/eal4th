@@ -3,7 +3,7 @@
   background-color: $color__background_grey;
   min-height: 350px;
   .site-info {
-    padding: 50px 25px 0;
+    padding: 40px 15px 0;
     p,a {
       @include font-size(1.3);
     }

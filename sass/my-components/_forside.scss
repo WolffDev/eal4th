@@ -1,0 +1,26 @@
+/**********************
+ * Forside
+ *********************/
+.top-image {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.abb-ref-link,
+.user-select,
+.quote-users {
+  min-height: 400px;
+}
+
+.abb-ref-link {
+  background-color: crimson;
+}
+
+.user-select {
+  background-color: limegreen;
+}
+
+.quote-users {
+  background-color: royalblue;
+}

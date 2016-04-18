@@ -158,7 +158,7 @@ if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 				<div class="nav-wrapper-mobile">
 					<div class="header-mobile-logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<img src="<?php echo get_template_directory_uri() . '/img/header_mobile_logo.png';?>" alt="header mobile logo">
+							<img src="<?php echo get_template_directory_uri() . '/img/logo-test.svg';?>" alt="header mobile logo">
 						</a>
 					</div>
 					<ul class="site-header-cart menu">

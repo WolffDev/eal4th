@@ -1058,17 +1058,16 @@ span i.material-icons {
 /**********************
  * General
  *********************/
+#page {
+  background-color: #fff;
+}
+
 .content-area {
   width: 100%;
 }
-.content-area .top-image {
-  height: 400px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .site-main {
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 /**********************
@@ -1088,13 +1087,40 @@ span i.material-icons {
   height: auto;
 }
 
+/**********************
+ * Forside
+ *********************/
+.top-image {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.abb-ref-link,
+.user-select,
+.quote-users {
+  min-height: 400px;
+}
+
+.abb-ref-link {
+  background-color: crimson;
+}
+
+.user-select {
+  background-color: limegreen;
+}
+
+.quote-users {
+  background-color: royalblue;
+}
+
 .site-footer {
   width: 100vw;
   background-color: #f0f0f0;
   min-height: 350px;
 }
 .site-footer .site-info {
-  padding: 50px 25px 0;
+  padding: 40px 15px 0;
 }
 .site-footer .site-info p, .site-footer .site-info a {
   font-size: 20.8px;
