@@ -899,11 +899,15 @@ td, th {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1;
-  font-family: centuryGothic, sans-serif;
+  font-smoothing: antialiased;
 }
 
 *:focus {
   outline: none;
+}
+
+* div, * p {
+  font-family: centuryGothic;
 }
 
 .site-header {
@@ -1077,7 +1081,7 @@ span i.material-icons {
 }
 
 .site-main {
-  margin: 0 15px;
+  margin: 15px 15px;
 }
 
 /**********************
@@ -1111,7 +1115,7 @@ span i.material-icons {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 70px;
 }
 
 .user-select,
@@ -1119,30 +1123,151 @@ span i.material-icons {
   min-height: 400px;
 }
 
-.abb-ref-link {
+.abn-ref-link {
   height: 120px;
-  background-image: url(http://www.lorempixel.com/400/150/);
+  background-image: url(img/test1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 15px;
 }
-.abb-ref-link div {
+.abn-ref-link div {
   height: 120px;
 }
-.abb-ref-link p {
+.abn-ref-link p {
   font-size: 22.4px;
   font-size: 1.4rem;
   font-family: centuryGothicBold;
   position: relative;
   color: #fff;
 }
+.abn-ref-link p::after {
+  content: "\f0a9";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  font-size: 2rem;
+  position: absolute;
+  top: -2px;
+  right: -35px;
+}
+@media only screen and (min-width: 551px) and (max-width: 802px) {
+  .abn-ref-link p::after {
+    content: "\f0a9";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    font-size: 40px;
+    font-size: 2.5rem;
+    top: 0;
+    right: -46px;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 802px) {
+  .abn-ref-link p {
+    font-size: 33.6px;
+    font-size: 2.1rem;
+  }
+}
 
+.user-select {
+  margin: 7.5px;
+}
+.user-select div {
+  background-color: #fff;
+}
 .user-select p {
-  font-size: 22.4px;
-  font-size: 1.4rem;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.user-select-wrapper {
+  display: flex;
+}
+.user-select-wrapper .user-column {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.user-select-wrapper .user-column div {
+  background-color: royalblue;
+  width: 100%;
+  margin: 7.5px;
+  min-height: 150px;
 }
 
 .quote-users {
-  background-color: royalblue;
+  background-color: #f0f0f0;
+}
+.quote-users p {
+  color: #000;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+}
+.quote-users .user-quote {
+  margin: 0 auto;
+  max-width: 600px;
+}
+.quote-users .user-quote blockquote {
+  background-color: #fff;
+  display: flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  max-width: 100%;
+  min-height: 350px;
+  position: relative;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  color: #000;
+}
+@media only screen and (min-width: 551px) and (max-width: 802px) {
+  .quote-users .user-quote blockquote {
+    font-size: 28.8px;
+    font-size: 1.8rem;
+  }
+}
+.quote-users .user-quote blockquote::before {
+  content: "\f10d";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  font-size: 2rem;
+  color: #8b8b8b;
+  position: absolute;
+  top: 125px;
+  left: 26px;
+}
+@media only screen and (min-width: 551px) and (max-width: 802px) {
+  .quote-users .user-quote blockquote::before {
+    left: 60px;
+  }
+}
+.quote-users .user-quote blockquote footer {
+  position: absolute;
+  top: 220px;
+  right: 40px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 551px) and (max-width: 802px) {
+  .quote-users .user-quote blockquote footer {
+    right: 80px;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 802px) {
+  .user-select p,
+  .quote-users p {
+    font-size: 28.8px;
+    font-size: 1.8rem;
+  }
 }
 
 .site-footer {

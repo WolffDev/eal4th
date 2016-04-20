@@ -7,8 +7,12 @@
   list-style: none;
   @include font-size(1);
   line-height: 1;
-  font-family: $font__main, sans-serif;
+  // font-family: $font__main, sans-serif;
+  font-smoothing: antialiased;
 }
 *:focus {
   outline: none;
+}
+* div, * p {
+  font-family: $font__main;
 }

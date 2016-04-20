@@ -10,7 +10,7 @@
 .text-vh-align {
   @include flex(row,wrap,center);
   align-items: center;
-  height: 100px;
+  height: 70px;
 }
 
 .user-select,
@@ -18,11 +18,12 @@
   min-height: 400px;
 }
 
-.abb-ref-link {
+.abn-ref-link {
   height: 120px;
-  background-image: url(http://www.lorempixel.com/400/150/);
+  background-image: url(img/test1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 15px;
   div {
     height: 120px;
   }
@@ -31,15 +32,112 @@
     font-family: $font__bold;
     position: relative;
     color: $color__text_white;
+    &::after {
+      content: "\f0a9";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      @include font-size(2);
+      position: absolute;
+      top: -2px;
+      right: -35px;
+      @media #{$medium-only} {
+        content: "\f0a9";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        position: absolute;
+        @include font-size(2.5);
+        top: 0;
+        right: -46px;
+      }
+    }
+    @media #{$medium-only} {
+      @include font-size(2.1);
+    }
   }
 }
+
 
 .user-select {
+  margin: 7.5px;
+  div {
+    background-color: $color__text_white;
+  }
   p {
-    @include font-size(1.4);
+    @include font-size(1.6);
+    color: $color__text_over;
+  }
+}
+.user-select-wrapper {
+  display: flex;
+  .user-column {
+    width: 50%;
+    @include flex(row, wrap, center);
+    div {
+      background-color: royalblue;
+      width: 100%;
+      margin: 7.5px;
+      min-height: 150px;
+    }
   }
 }
 
+
 .quote-users {
-  background-color: royalblue;
+  background-color: $color__background_grey;
+  p {
+    color: $color__text_over;
+    @include font-size(1.6);
+  }
+  .user-quote {
+    margin: 0 auto;
+    max-width: 600px;
+    blockquote {
+      background-color: $color__text_white;
+      display: flex;
+      @include flex(row, wrap, center);
+      align-items: center;
+      margin: 15px;
+      max-width: 100%;
+      min-height: 350px;
+      position: relative;
+      @include font-size(1.6);
+      color: $color__text_brod;
+      @media #{$medium-only} {
+        @include font-size(1.8);
+      }
+      &::before {
+        content: "\f10d";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        @include font-size(2);
+        color: $color__quotes;
+        position: absolute;
+        top: 125px;
+        left: 26px;
+        @media #{$medium-only} {
+          left: 60px;
+        }
+      }
+      footer {
+        position: absolute;
+        top: 220px;
+        right: 40px;
+        @include font-size(1);
+        @media #{$medium-only} {
+          right: 80px;
+        }
+      }
+    }
+  }
+
+}
+
+.user-select p,
+.quote-users p {
+  @media #{$medium-only} {
+    @include font-size(1.8);
+  }
 }
