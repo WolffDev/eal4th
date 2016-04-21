@@ -32,26 +32,27 @@
     font-family: $font__bold;
     position: relative;
     color: $color__text_white;
-    &::after {
-      content: "\f0a9";
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      @include font-size(2);
-      position: absolute;
-      top: -2px;
-      right: -35px;
-      @media #{$medium-only} {
-        content: "\f0a9";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        position: absolute;
-        @include font-size(2.5);
-        top: 0;
-        right: -46px;
-      }
-    }
+
+    // &::after {
+    //   content: "";
+    //   font-family: FontAwesome;
+    //   font-style: normal;
+    //   font-weight: normal;
+    //   @include font-size(2);
+    //   position: absolute;
+    //   top: -2px;
+    //   right: -35px;
+    //   @media #{$medium-only} {
+    //     content: "\f0a9";
+    //     font-family: FontAwesome;
+    //     font-style: normal;
+    //     font-weight: normal;
+    //     position: absolute;
+    //     @include font-size(2.5);
+    //     top: 0;
+    //     right: -46px;
+    //   }
+    // }
     @media #{$medium-only} {
       @include font-size(2.1);
     }

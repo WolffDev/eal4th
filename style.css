@@ -1182,30 +1182,6 @@ span i.material-icons {
   position: relative;
   color: #fff;
 }
-.abn-ref-link p::after {
-  content: "\f0a9";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  font-size: 2rem;
-  position: absolute;
-  top: -2px;
-  right: -35px;
-}
-@media only screen and (min-width: 551px) and (max-width: 802px) {
-  .abn-ref-link p::after {
-    content: "\f0a9";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    position: absolute;
-    font-size: 40px;
-    font-size: 2.5rem;
-    top: 0;
-    right: -46px;
-  }
-}
 @media only screen and (min-width: 551px) and (max-width: 802px) {
   .abn-ref-link p {
     font-size: 33.6px;

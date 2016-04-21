@@ -28,19 +28,16 @@ get_header(); ?>
 				</div>
 				<div class="user-select-wrapper">
 					<div class="user-column">
-						<div></div>
-						<div></div>
-						<div></div>
+						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod pariatur perferendis aut commodi laborum fugit adipisci esse nisi, totam vel. Odit rerum libero minus, optio!</div>
+						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint perspiciatis accusantium cumque consequatur nulla quaerat blanditiis eos tempore voluptas ea repudiandae eum fuga, ipsam aliquid quam soluta fugiat.</div>
+						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dolor quia atque, autem, minus adipisci facilis, corporis quod molestias rerum ipsam nihil possimus doloremque. Veniam, facilis, quas! Vel amet, necessitatibus.</div>
 					</div>
 					<div class="user-column">
-						<div></div>
-						<div></div>
-						<div></div>
+						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quos ratione id facere quod laudantium soluta quam deserunt eaque quia, vitae sapiente, voluptas nesciunt repudiandae.</div>
+						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis natus veniam et magnam, facilis necessitatibus explicabo, libero minima exercitationem consectetur? Consectetur id aperiam soluta, hic quod aliquam ipsum?</div>
+						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus aperiam voluptas quis voluptatum blanditiis explicabo commodi sapiente odit accusantium distinctio! Eos tenetur praesentium, itaque odit explicabo excepturi pariatur ipsum. In, omnis, tempore quod, illo ipsum voluptatem pariatur delectus hic, amet necessitatibus molestias!</div>
 					</div>
 				</div>
-				<?php
-
-				?>
 			</div>
 
 			<div class="quote-users">
@@ -57,7 +54,6 @@ get_header(); ?>
 						<footer>- David Wolff, Medejer Artea A/S</footer>
 					</blockquote>
 				</div>
-
 			</div>
 
 		</main><!-- #main -->
