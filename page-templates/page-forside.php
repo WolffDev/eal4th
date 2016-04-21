@@ -28,9 +28,28 @@ get_header(); ?>
 				</div>
 				<div class="user-select-wrapper">
 					<div class="user-column">
-						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod pariatur perferendis aut commodi laborum fugit adipisci esse nisi, totam vel. Odit rerum libero minus, optio!</div>
-						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint perspiciatis accusantium cumque consequatur nulla quaerat blanditiis eos tempore voluptas ea repudiandae eum fuga, ipsam aliquid quam soluta fugiat.</div>
-						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dolor quia atque, autem, minus adipisci facilis, corporis quod molestias rerum ipsam nihil possimus doloremque. Veniam, facilis, quas! Vel amet, necessitatibus.</div>
+						<?php
+				        $args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'user-votes', 'orderby' => 'asc' );
+				        $loop = new WP_Query( $args );
+				        while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+								<div>
+                  <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+
+                    <!-- <?php woocommerce_show_product_sale_flash( $post, $product ); ?> -->
+
+                    <?php echo get_the_post_thumbnail($loop->post->ID, 'custom-size'); ?>
+
+                    <h3 class="hide"><?php the_title(); ?></h3>
+
+                  	<span class="hide price"><?php echo $product->get_price_html(); ?></span>
+
+                  </a>
+
+                  <!-- <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?> -->
+								</div>
+
+				    <?php endwhile; ?>
+				    <?php wp_reset_query(); ?>
 					</div>
 					<div class="user-column">
 						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quos ratione id facere quod laudantium soluta quam deserunt eaque quia, vitae sapiente, voluptas nesciunt repudiandae.</div>

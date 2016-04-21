@@ -1166,13 +1166,17 @@ span i.material-icons {
   width: 50%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 .user-select-wrapper .user-column div {
   background-color: royalblue;
   width: 100%;
-  margin: 7.5px;
+  border: solid 7.5px #fff;
   min-height: 150px;
+  overflow: hidden;
+}
+.user-select-wrapper .user-column div .hide {
+  display: none;
 }
 
 .quote-users {

@@ -74,12 +74,16 @@
   display: flex;
   .user-column {
     width: 50%;
-    @include flex(row, wrap, center);
+    @include flex(row, wrap, space-between);
     div {
       background-color: royalblue;
       width: 100%;
-      margin: 7.5px;
+      border: solid 7.5px #fff;
       min-height: 150px;
+      overflow: hidden;
+      .hide {
+        display: none;
+      }
     }
   }
 }

@@ -1216,16 +1216,20 @@ span i.material-icons {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .user-select-wrapper .user-column div {
   background-color: royalblue;
   width: 100%;
-  margin: 7.5px;
+  border: solid 7.5px #fff;
   min-height: 150px;
+  overflow: hidden;
+}
+.user-select-wrapper .user-column div .hide {
+  display: none;
 }
 
 .quote-users {
