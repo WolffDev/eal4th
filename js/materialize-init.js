@@ -1,15 +1,13 @@
 (function($){
   $(function(){
 
-    $(".dropdown-button").dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      hover: false,
-      belowOrigin: true,
-      alignment: 'right'
+    $('.button-collapse').sideNav({
+        menuWidth: 300, // Default is 240
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       }
     );
-
+    $('.mobile-close').sideNav('hide');
     // smooth scroll on same page
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {

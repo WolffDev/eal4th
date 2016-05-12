@@ -173,8 +173,9 @@ if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 							</ul>
 						</li>
 					</ul>
-					<a href="#"><i data-activates="dropdown1" class="material-icons dropdown-button">menu</i></a>
-					<div id="dropdown1" class="dropdown-content">
+					<a href="#"><i data-activates="slide-out" class="material-icons button-collapse">menu</i></a>
+					<div id="slide-out" class="side-nav">
+						<a href="#"><i class="material-icons mobile-close">close</i></a>
 						<?php
 						wp_nav_menu(
 							array(
