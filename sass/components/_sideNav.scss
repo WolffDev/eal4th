@@ -37,7 +37,7 @@ $sidenav-bg-color: crimson;
     float: none;
     padding: 0 $sidenav-padding-right;
     line-height: $sidenav-item-height;
-    &:hover, &.active { background-color: $color__4; }
+    &:hover, &.active { background-color: rgba($color__3, .4); }
   }
   a {
     color: #444;
