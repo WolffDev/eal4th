@@ -90,6 +90,31 @@
   display: inline-block;
 }
 
+.nav-wrapper-mobile {
+  .material-icons {
+    @include font-size(2.5);
+  }
+
+  .side-nav > a {
+    text-align: right;
+  }
+  .side-nav a {
+    height: 2rem;
+  }
+  .mobile-navigation {
+    padding-top: 20px;
+    ul {
+      display: flex;
+      @include flex(column, wrap, space-around);
+      li a {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
 /**********************
  * Header cart, widget
  *********************/
@@ -100,15 +125,15 @@
 /**********************
  * Nav header cart
  *********************/
- .site-header-cart {
-   padding: 10px;
- }
- span i.material-icons {
-   vertical-align: middle;
- }
- .cart-short-list {
-   position: relative;
- }
+.site-header-cart {
+  padding: 10px;
+}
+span i.material-icons {
+  vertical-align: middle;
+}
+.cart-short-list {
+  position: relative;
+}
 .cart-long-list {
   display: none;
 }

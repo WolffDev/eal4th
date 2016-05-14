@@ -37,7 +37,7 @@ $sidenav-bg-color: crimson;
     float: none;
     padding: 0 $sidenav-padding-right;
     line-height: $sidenav-item-height;
-    &:hover, &.active { background-color: #ddd; }
+    &:hover, &.active { background-color: $color__4; }
   }
   a {
     color: #444;
@@ -45,7 +45,7 @@ $sidenav-bg-color: crimson;
     font-size: 1rem;
     height: $sidenav-item-height;
     line-height: $sidenav-item-height;
-    padding: 0 $sidenav-padding-right;
+    padding: 1.5em $sidenav-padding-right;
   }
 }
 
