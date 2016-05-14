@@ -46,6 +46,9 @@ $sidenav-bg-color: crimson;
     height: $sidenav-item-height;
     line-height: $sidenav-item-height;
     padding: 1.5em $sidenav-padding-right;
+    i {
+      padding: 10px;
+    }
   }
 }
 
