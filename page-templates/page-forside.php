@@ -6,8 +6,10 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div class="top-image" style="background-image: url(<?php echo get_template_directory_uri() . '/img/top-image.jpeg';?>)">
-		</div>
+		<?php $image_id = get_post_thumbnail_id(); $image_url = wp_get_attachment_image_src($image_id,'post', true); ?>
+
+		<div class="top-image" style="background-image: url(<?php echo $image_url[0];?>);"></div>
+		
 		<main id="frontpage" class="frontpage-wrapper" role="main">
 
 			<div class="abn-ref-link">
