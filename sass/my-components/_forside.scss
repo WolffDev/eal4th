@@ -51,14 +51,18 @@
 .user-select-wrapper {
   display: flex;
   .user-column {
-    width: 50%;
+    width: 100%;
     @include flex(row, wrap, space-between);
     div {
       background-color: royalblue;
-      width: 100%;
+      width: 50%;
       border: solid 7.5px #fff;
-      min-height: 150px;
       overflow: hidden;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       .hide {
         display: none;
       }

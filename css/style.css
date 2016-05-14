@@ -1183,17 +1183,21 @@ span i.material-icons {
   display: flex;
 }
 .user-select-wrapper .user-column {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 .user-select-wrapper .user-column div {
   background-color: royalblue;
-  width: 100%;
+  width: 50%;
   border: solid 7.5px #fff;
-  min-height: 150px;
   overflow: hidden;
+}
+.user-select-wrapper .user-column div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .user-select-wrapper .user-column div .hide {
   display: none;

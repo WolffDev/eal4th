@@ -1241,7 +1241,7 @@ span i.material-icons {
   display: flex;
 }
 .user-select-wrapper .user-column {
-  width: 50%;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1256,10 +1256,23 @@ span i.material-icons {
 }
 .user-select-wrapper .user-column div {
   background-color: royalblue;
-  width: 100%;
+  width: 50%;
   border: solid 7.5px #fff;
-  min-height: 150px;
   overflow: hidden;
+}
+.user-select-wrapper .user-column div a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .user-select-wrapper .user-column div .hide {
   display: none;
