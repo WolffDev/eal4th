@@ -999,6 +999,9 @@ td, th {
 .nav-wrapper-mobile #menu-icon {
   padding: 10px 0 10px 10px;
 }
+.nav-wrapper-mobile #menu-icon img {
+  height: 40px;
+}
 .nav-wrapper-mobile .material-icons {
   font-size: 32px;
   font-size: 2rem;

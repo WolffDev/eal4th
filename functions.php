@@ -173,7 +173,7 @@ if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 							</ul>
 						</li>
 					</ul>
-					<a href="#" id="menu-icon"><i data-activates="slide-out" class="material-icons button-collapse">menu</i></a>
+					<a href="#" id="menu-icon"><img data-activates="slide-out" class="button-collapse" src="<?php echo get_template_directory_uri() . '/img/menu-logo.svg';?>" alt="header mobile logo"></a>
 					<div id="slide-out" class="side-nav">
 						<a href="#"><i class="material-icons mobile-close">close</i></a>
 						<?php

@@ -93,6 +93,9 @@
 .nav-wrapper-mobile {
   #menu-icon {
     padding: 10px 0 10px 10px;
+    img {
+      height: 40px;
+    }
   }
   .material-icons {
     @include font-size(2);
