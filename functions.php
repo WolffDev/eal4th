@@ -147,6 +147,39 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 	}
 }
 
+/**********************************************
+ ******* wooCommerce Single Product ******
+ *********************************************/
+/**
+* woocommerce_single_product_summary hook.
+*
+* @hooked woocommerce_template_single_title - 5
+* @hooked woocommerce_template_single_rating - 10
+* @hooked woocommerce_template_single_price - 10
+* @hooked woocommerce_template_single_excerpt - 20
+* @hooked woocommerce_template_single_add_to_cart - 30
+* @hooked woocommerce_template_single_meta - 40
+* @hooked woocommerce_template_single_sharing - 50
+*/
+remove_action( "woocommerce_before_single_product_summary", "woocommerce_show_product_sale_flash", 10 );
+remove_action("woocommerce_single_product_summary", "woocommerce_template_single_title", 5 );
+remove_action("woocommerce_single_product_summary", "woocommerce_template_single_meta", 40 );
+add_filter( "woocommerce_before_single_product_summary", "woocommerce_template_single_title", 5 );
+
+function woocommerce_template_product_description() {
+   wc_get_template( 'single-product/tabs/description.php' );
+ }
+add_filter( 'woocommerce_single_product_summary', 'woocommerce_template_product_description', 35 );
+
+function woocommerce_template_product_information() {
+   wc_get_template( 'single-product/tabs/additional-information.php' );
+ }
+add_filter( 'woocommerce_single_product_summary', 'woocommerce_template_product_information', 5 );
+
+
+
+
+
 if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 	/**
 	 * Display Primary Navigation
@@ -173,7 +206,7 @@ if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 							</ul>
 						</li>
 					</ul>
-					<a href="#" id="menu-icon"><img data-activates="slide-out" class="button-collapse" src="<?php echo get_template_directory_uri() . '/img/menu-logo.svg';?>" alt="header mobile logo"></a>
+					<a href="#" id="menu-icon" data-activates="slide-out" class="button-collapse"><img src="<?php echo get_template_directory_uri() . '/img/menu-logo.svg';?>" alt="header mobile logo"></a>
 					<div id="slide-out" class="side-nav">
 						<a href="#"><i class="material-icons mobile-close">close</i></a>
 						<?php
