@@ -78,7 +78,7 @@ function eal4th_setup() {
 	// 	'link',
 	// ) );
 
-	add_image_size( 'custom-size', 450, 350, array( 'left', 'top'));
+	add_image_size( 'custom-size-front', 450, 350);
 
 	// Set up the WordPress core custom background feature.
 	// add_theme_support( 'custom-background', apply_filters( 'eal4th_custom_background_args', array(

@@ -37,7 +37,7 @@ get_header(); ?>
 
                     <?php // woocommerce_show_product_sale_flash( $post, $product ); ?>
 
-                    <?php echo get_the_post_thumbnail($loop->post->ID, 'custom-size'); ?>
+                    <?php echo get_the_post_thumbnail($loop->post->ID, 'custom-size-front'); ?>
 
                     <!-- <h3 class="hide"><?php the_title(); ?></h3>
 
