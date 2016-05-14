@@ -54,7 +54,6 @@
     width: 100%;
     @include flex(row, wrap, space-between);
     div {
-      background-color: royalblue;
       width: 50%;
       border: solid 7.5px #fff;
       overflow: hidden;

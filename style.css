@@ -1255,7 +1255,6 @@ span i.material-icons {
           justify-content: space-between;
 }
 .user-select-wrapper .user-column div {
-  background-color: royalblue;
   width: 50%;
   border: solid 7.5px #fff;
   overflow: hidden;
