@@ -1546,7 +1546,7 @@ span i.material-icons {
 .site-footer {
   width: 100vw;
   background-color: #f0f0f0;
-  min-height: 350px;
+  min-height: 250px;
 }
 .site-footer .site-info {
   padding: 40px 15px 0;
@@ -1554,4 +1554,8 @@ span i.material-icons {
 .site-footer .site-info p, .site-footer .site-info a {
   font-size: 20.8px;
   font-size: 1.3rem;
+  color: #454545;
+}
+.site-footer .site-info a {
+  color: crimson;
 }

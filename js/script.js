@@ -15,8 +15,8 @@ jQuery(document).ready(function($){
   });
 
   // add class to label when focus on input
-  $('#customer_details .woocommerce-billing-fields p').on('click', function(){
-    $(this).find('label').addClass('has-value');
+  $('#customer_details .woocommerce-billing-fields p input').focus(function(){
+    $(this).prev().addClass('has-value');
     $(this).find('#billing_country_field label').removeClass('has-value');
   });
 
