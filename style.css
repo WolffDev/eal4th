@@ -1468,6 +1468,34 @@ span i.material-icons {
   padding-bottom: 15px;
 }
 
+#customer_details input[type="text"],
+#customer_details input[type="email"],
+#customer_details input[type="tel"] {
+  background-color: #ddd;
+  font-size: 24px;
+  font-size: 1.5rem;
+  height: 60px;
+  padding: 0 20px;
+}
+
+#customer_details {
+  padding-bottom: 15px;
+}
+#customer_details div.col-2 {
+  display: none;
+}
+
+.woocommerce input.button.alt {
+  width: 100%;
+  position: relative;
+  border-radius: 0;
+  background-color: #362434;
+  font-family: centuryGothic;
+  color: #fff;
+  font-size: 32px;
+  font-size: 2rem;
+}
+
 .site-footer {
   width: 100vw;
   background-color: #f0f0f0;

@@ -183,6 +183,15 @@ function hooks_close_div() {
 
 
 
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields( $fields ) {
+     unset($fields['order']['order_comments']);
+
+     return $fields;
+}
+
 
 if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
 	/**

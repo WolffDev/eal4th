@@ -1,0 +1,25 @@
+#customer_details input[type="text"],
+#customer_details input[type="email"],
+#customer_details input[type="tel"] {
+  background-color: #ddd;
+  @include font-size(1.5);
+  height: 60px;
+  padding: 0 20px;
+}
+
+#customer_details {
+  padding-bottom: 15px;
+  div.col-2 {
+    display: none;
+  }
+}
+
+.woocommerce input.button.alt {
+  width: 100%;
+  position: relative;
+  border-radius: 0;
+  background-color: $color__5;
+  font-family: $font__main;
+  color: $color__text_white;
+  @include font-size(2);
+}
