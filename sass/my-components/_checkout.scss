@@ -27,7 +27,6 @@
 
 #billing_country_field label {
   position: relative;
-  left: 0;
 }
 
 .woocommerce form .form-row {
@@ -52,4 +51,16 @@
 .has-value {
   top: 20px !important;
   font-size: 12px !important;
+}
+
+.woocommerce-checkout #billing_country_field {
+  a {
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  span.select2-chosen {
+    @include font-size(1.5);
+    padding-left: 10px;
+  }
 }

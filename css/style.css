@@ -1401,7 +1401,6 @@ span i.material-icons {
 
 #billing_country_field label {
   position: relative;
-  left: 0;
 }
 
 .woocommerce form .form-row {
@@ -1427,6 +1426,17 @@ span i.material-icons {
 .has-value {
   top: 20px !important;
   font-size: 12px !important;
+}
+
+.woocommerce-checkout #billing_country_field a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.woocommerce-checkout #billing_country_field span.select2-chosen {
+  font-size: 24px;
+  font-size: 1.5rem;
+  padding-left: 10px;
 }
 
 .site-footer {
