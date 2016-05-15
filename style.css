@@ -1470,7 +1470,8 @@ span i.material-icons {
 
 #customer_details input[type="text"],
 #customer_details input[type="email"],
-#customer_details input[type="tel"] {
+#customer_details input[type="tel"],
+#customer_details input[type="password"] {
   background-color: #ddd;
   font-size: 24px;
   font-size: 1.5rem;
@@ -1494,6 +1495,36 @@ span i.material-icons {
   color: #fff;
   font-size: 32px;
   font-size: 2rem;
+}
+
+#billing_country_field label {
+  position: relative;
+  left: 0;
+}
+
+.woocommerce form .form-row {
+  padding: 10px 0;
+  margin: 0;
+  display: block;
+  position: relative;
+}
+.woocommerce form .form-row label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-style: italic;
+  font-size: 18px;
+  color: #999;
+  pointer-events: none;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
+
+.has-value {
+  top: 20px !important;
+  font-size: 12px !important;
 }
 
 .site-footer {
