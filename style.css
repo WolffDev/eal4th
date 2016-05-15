@@ -1433,14 +1433,32 @@ span i.material-icons {
   margin: 1.3em 0;
 }
 .woocommerce div.product form.cart button {
-  height: 60px;
   width: 100%;
+  height: 80px;
+  position: relative;
   border-radius: 0;
   background-color: #362434;
   font-family: centuryGothicBold;
   color: #fff;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 32px;
+  font-size: 2rem;
+}
+.woocommerce div.product form.cart button:after {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 48px;
+  font-size: 3rem;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  direction: ltr;
+  content: '\e8cc';
+  padding-left: 20px;
 }
 
 .woocommerce div.product .entry-summary > p {
