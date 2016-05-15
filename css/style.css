@@ -1370,6 +1370,15 @@ span i.material-icons {
   padding-bottom: 15px;
 }
 
+.woocommerce-billing-fields h3 {
+  background-color: #ddd;
+  height: 50px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin: 0 -15px 0;
+  padding: 13px 15px;
+}
+
 #customer_details input[type="text"],
 #customer_details input[type="email"],
 #customer_details input[type="tel"],

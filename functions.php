@@ -188,7 +188,10 @@ add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 function custom_override_checkout_fields( $fields ) {
 	$fields['account']['account_password']['placeholder'] = '';
 	$fields['billing']['billing_address_1']['placeholder'] = '';
+	$fields['billing']['billing_postcode']['label'] = 'Postnummer';
 	unset($fields['order']['order_comments']);
+	unset($fields['billing']['billing_address_2']);
+	unset($fields['billing']['billing_country']);
 	return $fields;
 }
 

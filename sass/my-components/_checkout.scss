@@ -1,8 +1,18 @@
+.woocommerce-billing-fields {
+  h3 {
+    background-color: $color__div_bg;
+    height: 50px;
+    @include font-size(1.5);
+    margin: 0 -15px 0;
+    padding: 13px 15px;
+  }
+}
+
 #customer_details input[type="text"],
 #customer_details input[type="email"],
 #customer_details input[type="tel"],
 #customer_details input[type="password"] {
-  background-color: #ddd;
+  background-color: $color__div_bg;
   @include font-size(1.5);
   height: 60px;
   padding: 0 20px;
