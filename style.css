@@ -1313,7 +1313,7 @@ span i.material-icons {
   position: relative;
   font-size: 25.6px;
   font-size: 1.6rem;
-  color: #000;
+  color: #454545;
 }
 @media only screen and (min-width: 551px) and (max-width: 802px) {
   .quote-users .user-quote blockquote {
@@ -1357,6 +1357,97 @@ span i.material-icons {
     font-size: 28.8px;
     font-size: 1.8rem;
   }
+}
+
+.woocommerce div.product .product_title {
+  height: 60px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  background-color: #f0f0f0;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: centuryGothic;
+}
+
+.woocommerce div.product div.images,
+.woocommerce div.product div.summary {
+  margin-bottom: 0;
+}
+
+.woocommerce div.product div.images {
+  padding: 15px 15px 7.5px;
+}
+
+.woocommerce div.product div.summary {
+  padding: 7.5px 15px 7.5px;
+}
+
+.attri {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.attri div, .attri div p {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  color: #454545;
+}
+.attri div {
+  padding-bottom: 10px;
+}
+.attri div:first-child {
+  min-width: 180px;
+}
+.attri div:last-child, .attri div:last-child p {
+  text-align: left;
+  font-family: centuryGothicBold;
+}
+
+.single-product .single-price,
+.single-product .single-price .price span {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  color: #454545;
+}
+.single-product .single-price {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.single-product .single-price .price span {
+  text-align: left;
+  font-family: centuryGothicBold;
+  padding-left: 142px;
+}
+
+.woocommerce div.product form.cart {
+  margin: 1em 0;
+}
+.woocommerce div.product form.cart button {
+  height: 60px;
+  width: 100%;
+  border-radius: 0;
+  background-color: #362434;
+  font-family: centuryGothicBold;
+  color: #fff;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.woocommerce div.product .entry-summary > p {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  color: #454545;
+  padding-bottom: 15px;
 }
 
 .site-footer {

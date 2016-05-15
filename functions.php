@@ -150,17 +150,6 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 /**********************************************
  ******* wooCommerce Single Product ******
  *********************************************/
-/**
-* woocommerce_single_product_summary hook.
-*
-* @hooked woocommerce_template_single_title - 5
-* @hooked woocommerce_template_single_rating - 10
-* @hooked woocommerce_template_single_price - 10
-* @hooked woocommerce_template_single_excerpt - 20
-* @hooked woocommerce_template_single_add_to_cart - 30
-* @hooked woocommerce_template_single_meta - 40
-* @hooked woocommerce_template_single_sharing - 50
-*/
 remove_action( "woocommerce_before_single_product_summary", "woocommerce_show_product_sale_flash", 10 );
 remove_action("woocommerce_single_product_summary", "woocommerce_template_single_title", 5 );
 remove_action("woocommerce_single_product_summary", "woocommerce_template_single_meta", 40 );
@@ -175,6 +164,21 @@ function woocommerce_template_product_information() {
    wc_get_template( 'single-product/tabs/additional-information.php' );
  }
 add_filter( 'woocommerce_single_product_summary', 'woocommerce_template_product_information', 5 );
+
+function wc_remove_all_quantity_fields( $return, $product ) {
+    return true;
+}
+add_filter( 'woocommerce_is_sold_individually', 'wc_remove_all_quantity_fields', 10, 2 );
+
+
+add_action('woocommerce_single_product_summary', 'hooks_open_div', 9);
+function hooks_open_div() {
+    echo '<div class="single-price">Pris:';
+}
+add_action('woocommerce_single_product_summary', 'hooks_close_div', 11);
+function hooks_close_div() {
+    echo '</div>';
+}
 
 
 
@@ -257,6 +261,15 @@ if ( ! function_exists( 'eal4th_cart_link_fragment' ) ) {
 	}
 }
 
+/* Currency */
+add_filter('woocommerce_currency_symbol', 'add_custom_danish_currency_symbol', 10, 2);
+function add_custom_danish_currency_symbol( $currency_symbol, $currency ) {
+     switch( $currency ) {
+          case 'DKK': $currency_symbol = 'kr.'; break;
+     }
+     return $currency_symbol;
+}
+
 // if ( ! function_exists( 'eal4th_header_cart' ) ) {
 // 	function eal4th_header_cart() {
 //
@@ -274,32 +287,32 @@ add_action( 'eal4th_header', 'eal4th_primary_navigation',		50 );
 add_action( 'eal4th_mobile', 'eal4th_mobile_navigation',		50 );
 // add_action( 'eal4th_header', 'eal4th_header_cart', 		50 );
 
-
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function eal4th_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'eal4th' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'eal4th' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'eal4th_widgets_init' );
+// function eal4th_widgets_init() {
+// 	register_sidebar( array(
+// 		'name'          => esc_html__( 'Sidebar', 'eal4th' ),
+// 		'id'            => 'sidebar-1',
+// 		'description'   => esc_html__( 'Add widgets here.', 'eal4th' ),
+// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => '</section>',
+// 		'before_title'  => '<h2 class="widget-title">',
+// 		'after_title'   => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'eal4th_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function eal4th_scripts() {
 	// wp_enqueue_style( 'eal4th-materialize-style' , get_template_directory_uri() . '/sass/materialize.css' );
-
+	wp_enqueue_style('woocommerce_css', plugins_url() .'/woocommerce/assets/css/woocommerce.css');
 	wp_enqueue_style( 'eal4th-style', get_stylesheet_uri() );
 
 
