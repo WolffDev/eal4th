@@ -148,6 +148,11 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 }
 
 /**********************************************
+ ******* wooCommerce Order Field ******
+ *********************************************/
+
+
+/**********************************************
  ******* wooCommerce Single Product ******
  *********************************************/
 remove_action( "woocommerce_before_single_product_summary", "woocommerce_show_product_sale_flash", 10 );

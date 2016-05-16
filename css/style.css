@@ -1448,6 +1448,80 @@ span i.material-icons {
   padding-left: 10px;
 }
 
+.woocommerce-cart .entry-header {
+  background-color: #f0f0f0;
+  margin: 0 -15px 0;
+}
+.woocommerce-cart .entry-header h1 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #454545;
+  padding: 13px 15px;
+}
+.woocommerce-cart .cart-wrapper .cart_item {
+  margin-bottom: 40px;
+}
+.woocommerce-cart .cart-wrapper .product-name {
+  width: 100%;
+  margin: 15px 0;
+}
+.woocommerce-cart .cart-wrapper .product-name a {
+  color: #454545;
+  font-size: 32px;
+  font-size: 2rem;
+}
+.woocommerce-cart .cart-wrapper .product-details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.woocommerce-cart .cart-wrapper .product-details .product-thumbnail {
+  width: 50%;
+}
+.woocommerce-cart .cart-wrapper .product-details .product-info {
+  border-top: 1px solid #f0f0f0;
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.woocommerce-cart .cart-wrapper .product-details .product-info .product-id {
+  padding-top: 15px;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.woocommerce-cart .cart-wrapper .product-details .product-info .product-price,
+.woocommerce-cart .cart-wrapper .product-details .product-info .product-price span {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.woocommerce-cart .cart-wrapper .product-details .product-info .product-price span {
+  font-family: centuryGothicBold;
+  font-size: 28.8px;
+  font-size: 1.8rem;
+}
+.woocommerce-cart .cart-wrapper .product-details .product-info .product-remove {
+  width: 100%;
+}
+.woocommerce-cart .cart-wrapper .product-details .product-info .product-remove button {
+  width: 100%;
+  height: 60px;
+  background-color: #362434;
+  color: #fff;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.woocommerce-cart .cart-wrapper .product-details .product-info .product-remove button:hover {
+  cursor: pointer;
+  background: rbga(#362434, 0.2);
+}
+.woocommerce-cart .cart-wrapper .product-details .product-info .product-remove a.remove {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
 .site-footer {
   width: 100vw;
   background-color: #f0f0f0;
