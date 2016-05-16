@@ -1404,8 +1404,8 @@ span i.material-icons {
   background-color: #362434;
   font-family: centuryGothic;
   color: #fff;
-  font-size: 32px;
-  font-size: 2rem;
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 #billing_country_field label {
@@ -1446,6 +1446,15 @@ span i.material-icons {
   font-size: 24px;
   font-size: 1.5rem;
   padding-left: 10px;
+}
+
+#order_review_heading {
+  height: 50px;
+  background-color: #ddd;
+  margin: 0 -15px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  padding: 13px 15px;
 }
 
 .woocommerce-cart .entry-header {
@@ -1507,19 +1516,34 @@ span i.material-icons {
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-remove button {
   width: 100%;
   height: 60px;
-  background-color: #362434;
+  background-color: #473146;
   color: #fff;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20.8px;
+  font-size: 1.3rem;
 }
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-remove button:hover {
   cursor: pointer;
-  background: rbga(#362434, 0.2);
+  background: #362434;
 }
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-remove a.remove {
   width: 100%;
   height: 100%;
   border-radius: 0;
+}
+.woocommerce-cart .cart-wrapper .cart_totals h2 {
+  height: 50px;
+  background-color: #ddd;
+  margin: 0 -15px 10px;
+  padding: 13px 15px;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.woocommerce-cart .cart-wrapper .wc-proceed-to-checkout a {
+  background-color: #473146;
+  border-radius: 0;
+}
+.woocommerce-cart .cart-wrapper .wc-proceed-to-checkout a:hover {
+  background-color: #362434;
 }
 
 .site-footer {

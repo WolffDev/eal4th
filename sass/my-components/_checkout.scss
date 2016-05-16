@@ -32,7 +32,7 @@
   background-color: $color__5;
   font-family: $font__main;
   color: $color__text_white;
-  @include font-size(2);
+  @include font-size(1.5);
 }
 
 #billing_country_field label {
@@ -73,4 +73,12 @@
     @include font-size(1.5);
     padding-left: 10px;
   }
+}
+
+#order_review_heading {
+  height: 50px;
+  background-color: $color__div_bg;
+  margin: 0 -15px;
+  @include font-size(1.5);
+  padding: 13px 15px;
 }
