@@ -1499,11 +1499,14 @@ span i.material-icons {
   width: 100%;
   position: relative;
   border-radius: 0;
-  background-color: #362434;
+  background-color: #473146;
   font-family: centuryGothic;
   color: #fff;
   font-size: 24px;
   font-size: 1.5rem;
+}
+.woocommerce input.button.alt:hover {
+  background-color: #362434;
 }
 
 #billing_country_field label {
@@ -1561,6 +1564,11 @@ span i.material-icons {
   padding: 13px 15px;
 }
 
+.woocommerce table.shop_table {
+  border-radius: 0;
+  margin: 15px 0;
+}
+
 .woocommerce-cart .entry-header {
   background-color: #f0f0f0;
   margin: 0 -15px 0;
@@ -1570,9 +1578,6 @@ span i.material-icons {
   font-size: 1.5rem;
   color: #454545;
   padding: 13px 15px;
-}
-.woocommerce-cart .cart-wrapper .cart_item {
-  margin-bottom: 40px;
 }
 .woocommerce-cart .cart-wrapper .product-name {
   width: 100%;
@@ -1654,10 +1659,10 @@ span i.material-icons {
   border-radius: 0;
 }
 .woocommerce-cart .cart-wrapper .cart_totals h2 {
-  height: 50px;
+  height: 39px;
   background-color: #ddd;
   margin: 0 -15px 10px;
-  padding: 13px 15px;
+  padding: 0 15px;
   font-size: 24px;
   font-size: 1.5rem;
 }
@@ -1667,6 +1672,11 @@ span i.material-icons {
 }
 .woocommerce-cart .cart-wrapper .wc-proceed-to-checkout a:hover {
   background-color: #362434;
+}
+.woocommerce-cart .cart-wrapper .diveder {
+  height: 15px;
+  background-color: #ddd;
+  margin: 0 -15px;
 }
 
 .site-footer {

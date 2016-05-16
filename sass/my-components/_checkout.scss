@@ -29,10 +29,13 @@
   width: 100%;
   position: relative;
   border-radius: 0;
-  background-color: $color__5;
+  background-color: $color__4;
   font-family: $font__main;
   color: $color__text_white;
   @include font-size(1.5);
+  &:hover {
+    background-color: $color__5;
+  }
 }
 
 #billing_country_field label {
@@ -81,4 +84,8 @@
   margin: 0 -15px;
   @include font-size(1.5);
   padding: 13px 15px;
+}
+.woocommerce table.shop_table {
+  border-radius: 0;
+  margin: 15px 0;
 }

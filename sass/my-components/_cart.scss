@@ -10,7 +10,6 @@
   }
   .cart-wrapper {
     .cart_item {
-      margin-bottom: 40px;
     }
     .product-name {
       width: 100%;
@@ -65,10 +64,10 @@
       }
     }
     .cart_totals h2 {
-      height: 50px;
+      height: 39px;
       background-color: $color__div_bg;
       margin: 0 -15px 10px;
-      padding: 13px 15px;
+      padding: 0 15px;
       @include font-size(1.5);
     }
     .wc-proceed-to-checkout a {
@@ -77,6 +76,11 @@
       &:hover {
         background-color: $color__5;
       }
+    }
+    .diveder {
+      height: 15px;
+      background-color: $color__div_bg;
+      margin: 0 -15px;
     }
   }
 }

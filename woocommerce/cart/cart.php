@@ -92,6 +92,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							</div>
 						</div>
 					</div>
+					<div class="diveder"></div>
 				</div>
 
 				<?php
