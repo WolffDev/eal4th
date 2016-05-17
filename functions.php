@@ -186,6 +186,66 @@ function hooks_close_div() {
 }
 
 
+/**
+* WooCommerce: show all product attributes listed below each item on Cart page
+*/
+function isa_woo_cart_attributes($cart_item, $cart_item_key){
+
+    $item_data = $cart_item_key['data'];
+    $attributes = $item_data->get_attributes();
+
+
+    if ( ! $attributes ) {
+        return $cart_item;
+    }
+
+    $out = $cart_item . '<br />';
+
+    foreach ( $attributes as $attribute ) {
+
+        if ( $attribute['is_taxonomy'] ) {
+
+        // skip variations
+            if ( $attribute['is_variation'] ) {
+                continue;
+            }
+
+            // backwards compatibility for attributes which are registered as taxonomies
+
+            $product_id = $item_data->id;
+            $terms = wp_get_post_terms( $product_id, $attribute['name'], 'all' );
+
+            // get the taxonomy
+            $tax = $terms[0]->taxonomy;
+
+            // get the tax object
+            $tax_object = get_taxonomy($tax);
+
+            // get tax label
+            if ( isset ($tax_object->labels->name) ) {
+                $tax_label = $tax_object->labels->name;
+            } elseif ( isset( $tax_object->label ) ) {
+                $tax_label = $tax_object->label;
+            }
+
+            foreach ( $terms as $term ) {
+                //$out .= $tax_label . ': ';
+                $out .= '<div class="product-attri">' . $term->name . '</div>';
+            }
+
+        } else {
+
+            // not a taxonomy
+
+            //$out .= $attribute['name'] . ': ';
+            $out .= $attribute['value'] . '<br />';
+        }
+    }
+    echo $out;
+}
+
+add_filter( 'woocommerce_cart_item_price', 'isa_woo_cart_attributes', 10, 2 );
+
 
 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
@@ -199,6 +259,12 @@ function custom_override_checkout_fields( $fields ) {
 	unset($fields['billing']['billing_country']);
 	return $fields;
 }
+
+
+
+
+
+
 
 
 if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {

@@ -1497,18 +1497,18 @@ span i.material-icons {
   width: 50%;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
 }
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-id {
-  padding-top: 15px;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 16px;
+  font-size: 1rem;
 }
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-price,
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-price span {
   font-size: 24px;
   font-size: 1.5rem;
+  text-align: right;
 }
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-price span {
   font-family: centuryGothicBold;

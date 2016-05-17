@@ -27,15 +27,15 @@
       .product-info {
         border-top: 1px solid $color__background_grey;
         width: 50%;
-        @include flex(column, wrap, space-between);
+        @include flex(column, wrap, space-around);
         align-items: flex-end;
         .product-id {
-          padding-top: 15px;
-          @include font-size(1.5);
+          @include font-size(1);
         }
         .product-price,
         .product-price span {
           @include font-size(1.5);
+          text-align: right;
         }
         .product-price span {
           font-family: $font__bold;

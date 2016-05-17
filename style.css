@@ -1614,24 +1614,23 @@ span i.material-icons {
   -webkit-flex-flow: column wrap;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-id {
-  padding-top: 15px;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 16px;
+  font-size: 1rem;
 }
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-price,
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-price span {
   font-size: 24px;
   font-size: 1.5rem;
+  text-align: right;
 }
 .woocommerce-cart .cart-wrapper .product-details .product-info .product-price span {
   font-family: centuryGothicBold;

@@ -69,14 +69,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 
 						<div class="product-info">
-							<div class="product-id">
-								Vare nr: <?php echo $product_id; ?>
-							</div>
 
 							<div class="product-price" data-title="<?php _e( 'Price', 'woocommerce' ); ?>">
 								<?php
 									echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 								?>
+							</div>
+
+							<div class="product-id">
+								Vare nr: <?php echo $product_id; ?>
 							</div>
 
 							<div class="product-remove">
