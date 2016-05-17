@@ -1169,8 +1169,7 @@ span i.material-icons {
  * Forside
  *********************/
 .top-image {
-  height: 3000px;
-  width: 4000px;
+  height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
 }
