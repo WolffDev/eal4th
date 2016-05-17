@@ -943,7 +943,8 @@ td, th {
   list-style: none;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.3;
+  color: #454545;
   font-smoothing: antialiased;
 }
 
@@ -1276,10 +1277,20 @@ span i.material-icons {
 }
 
 .user-select {
-  margin: 7.5px;
+  padding: 7.5px;
+}
+@media only screen and (min-width: 803px) {
+  .user-select {
+    background-color: #eaeaea;
+  }
 }
 .user-select div {
   background-color: #fff;
+}
+@media only screen and (min-width: 803px) {
+  .user-select div {
+    background-color: #eaeaea;
+  }
 }
 .user-select p {
   font-size: 25.6px;
@@ -1290,16 +1301,34 @@ span i.material-icons {
 .user-select-wrapper {
   display: flex;
 }
+@media only screen and (min-width: 803px) {
+  .user-select-wrapper {
+    background-color: #eaeaea;
+  }
+}
 .user-select-wrapper .user-column {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+@media only screen and (min-width: 803px) {
+  .user-select-wrapper .user-column {
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: #eaeaea;
+  }
 }
 .user-select-wrapper .user-column div {
   width: 50%;
   border: solid 7.5px #fff;
   overflow: hidden;
+}
+@media only screen and (min-width: 803px) {
+  .user-select-wrapper .user-column div {
+    width: 33%;
+    border: solid 7.5px #eaeaea;
+  }
 }
 .user-select-wrapper .user-column div a {
   display: flex;
@@ -1311,7 +1340,12 @@ span i.material-icons {
 }
 
 .quote-users {
-  background-color: #f0f0f0;
+  background-color: #eaeaea;
+}
+@media only screen and (min-width: 803px) {
+  .quote-users {
+    padding: 7.5px 7.5px 40px;
+  }
 }
 .quote-users p {
   color: #000;
@@ -1323,6 +1357,12 @@ span i.material-icons {
   max-width: 600px;
   height: 100%;
 }
+@media only screen and (min-width: 803px) {
+  .quote-users .user-quote {
+    display: flex;
+    max-width: 1000px;
+  }
+}
 .quote-users .user-quote blockquote {
   background-color: #fff;
   display: flex;
@@ -1331,12 +1371,17 @@ span i.material-icons {
   justify-content: center;
   align-items: center;
   margin: 15px;
-  max-width: 100%;
-  min-height: 350px;
+  min-height: 250px;
   position: relative;
   font-size: 25.6px;
   font-size: 1.6rem;
   color: #454545;
+}
+@media only screen and (min-width: 803px) {
+  .quote-users .user-quote blockquote {
+    width: 50%;
+    margin: 7.5px;
+  }
 }
 @media only screen and (min-width: 551px) and (max-width: 802px) {
   .quote-users .user-quote blockquote {
@@ -1354,7 +1399,7 @@ span i.material-icons {
   transform: rotate(180deg);
   color: #8b8b8b;
   position: absolute;
-  top: 125px;
+  top: 80px;
   left: 26px;
 }
 @media only screen and (min-width: 551px) and (max-width: 802px) {
@@ -1364,7 +1409,7 @@ span i.material-icons {
 }
 .quote-users .user-quote blockquote footer {
   position: absolute;
-  top: 220px;
+  top: 160px;
   right: 40px;
   font-size: 16px;
   font-size: 1rem;
@@ -1381,6 +1426,35 @@ span i.material-icons {
     font-size: 28.8px;
     font-size: 1.8rem;
   }
+}
+
+.content-area .short-desc {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.content-area .short-desc h1 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  padding: 40px 0 20px;
+  margin: 0 15px;
+}
+.content-area .short-desc p {
+  padding: 10px 0;
+  margin: 0 15px;
+}
+.content-area .short-desc h2 {
+  padding: 10px 0;
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  font-family: centuryGothicBold;
+  margin: 0 15px;
+}
+
+.divider {
+  margin: 70px auto 0;
+  height: 10px;
+  width: 360px;
+  border-top: 2px solid #454545;
 }
 
 .woocommerce div.product .product_title {
@@ -1718,8 +1792,14 @@ span i.material-icons {
 
 .site-footer {
   width: 100vw;
-  background-color: #f0f0f0;
   min-height: 250px;
+  background-color: #fff;
+}
+@media only screen and (min-width: 803px) {
+  .site-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 .site-footer .site-info {
   padding: 40px 15px 0;
@@ -1728,6 +1808,10 @@ span i.material-icons {
   font-size: 20.8px;
   font-size: 1.3rem;
   color: #454545;
+}
+.site-footer .site-info .footer-mobile-logo img {
+  height: 50px;
+  margin: 10px 0;
 }
 .site-footer .site-info a {
   color: crimson;

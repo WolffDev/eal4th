@@ -5,7 +5,7 @@
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
-  @media #{$large_and_up} {
+  @media #{$large-and-up} {
     height: 450px;
     .top-inside-wrap {
       max-width: 1000px;
@@ -91,9 +91,15 @@
 }
 
 .user-select {
-  margin: 7.5px;
+  padding: 7.5px;
+  @media #{$large-and-up} {
+    background-color: $color__div_bg;
+  }
   div {
     background-color: $color__text_white;
+    @media #{$large-and-up} {
+      background-color: $color__div_bg;
+    }
   }
   p {
     @include font-size(1.6);
@@ -102,13 +108,25 @@
 }
 .user-select-wrapper {
   display: flex;
+  @media #{$large-and-up} {
+    background-color: $color__div_bg;
+  }
   .user-column {
     width: 100%;
-    @include flex(row, wrap, space-between);
+    @include flex(row, wrap, space-around);
+    @media #{$large-and-up} {
+      margin: 0 auto;
+      max-width: 1000px;
+      background-color: $color__div_bg;
+    }
     div {
       width: 50%;
       border: solid 7.5px #fff;
       overflow: hidden;
+      @media #{$large-and-up} {
+        width: 33%;
+        border: solid 7.5px $color__div_bg;
+      }
       a {
         display: flex;
         justify-content: center;
@@ -123,7 +141,10 @@
 
 
 .quote-users {
-  background-color: $color__background_grey;
+  background-color: $color__div_bg;
+  @media #{$large-and-up} {
+    padding: 7.5px 7.5px 40px;
+  }
   p {
     color: $color__text_over;
     @include font-size(1.6);
@@ -132,17 +153,24 @@
     margin: 0 auto;
     max-width: 600px;
     height: 100%;
+    @media #{$large-and-up} {
+      display: flex;
+      max-width: 1000px;
+    }
     blockquote {
       background-color: $color__text_white;
       display: flex;
       @include flex(row, wrap, center);
       align-items: center;
       margin: 15px;
-      max-width: 100%;
-      min-height: 350px;
+      min-height: 250px;
       position: relative;
       @include font-size(1.6);
       color: $color__text_brod;
+      @media #{$large-and-up} {
+        width: 50%;
+        margin: 7.5px;
+      }
       @media #{$medium-only} {
         @include font-size(1.8);
       }
@@ -155,7 +183,7 @@
         transform: rotate(180deg);
         color: $color__quotes;
         position: absolute;
-        top: 125px;
+        top: 80px;
         left: 26px;
         @media #{$medium-only} {
           left: 60px;
@@ -163,7 +191,7 @@
       }
       footer {
         position: absolute;
-        top: 220px;
+        top: 160px;
         right: 40px;
         @include font-size(1);
         @media #{$medium-only} {
@@ -172,12 +200,36 @@
       }
     }
   }
-
 }
-
 .user-select p,
 .quote-users p {
   @media #{$medium-only} {
     @include font-size(1.8);
   }
+}
+
+.content-area .short-desc {
+  margin: 0 auto;
+  max-width: 1000px;
+  h1 {
+    @include font-size(1.5);
+    padding: 40px 0 20px;
+    margin: 0 15px;
+  }
+  p {
+    padding: 10px 0;
+    margin: 0 15px;
+  }
+  h2 {
+    padding: 10px 0;
+    @include font-size(1.3);
+    font-family: $font__bold;
+    margin: 0 15px;
+  }
+}
+.divider {
+  margin: 70px auto 0;
+  height: 10px;
+  width: 360px;
+  border-top: 2px solid $color__text_brod;
 }
