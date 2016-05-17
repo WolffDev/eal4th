@@ -9,9 +9,11 @@ get_header(); ?>
 		<?php $image_id = get_post_thumbnail_id(); $image_url = wp_get_attachment_image_src($image_id,'post', true); ?>
 
 		<div class="top-image" style="background-image: url(<?php echo $image_url[0];?>);">
-			<h1 class="top-phrase hide-on-med-and-down">Ét splitsekund er alt du behøver</h1>
-			<h2 class="sup-phrase hide-on-med-and-down">Direkte overførelse af kunstværker,<br>nemt, bekvæmt & hurtig</h2>
-			<div class="btn hide-on-med-and-down"></div>
+			<div class="top-inside-wrap hide-on-med-and-down">
+				<h1 class="top-phrase">Ét splitsekund er alt<br>du behøver</h1>
+				<h2 class="sup-phrase">Direkte overførelse af kunstværker,<br>nemt, bekvæmt & hurtig</h2>
+				<a href="#"class="special-button">Se værkerne</a>
+			</div>
 		</div>
 
 		<main id="frontpage" class="frontpage-wrapper" role="main">

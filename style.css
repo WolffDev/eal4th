@@ -987,7 +987,7 @@ td, th {
 @media only screen and (min-width: 803px) {
   .nav-wrapper,
   .nav-wrapper-mobile {
-    height: 70px;
+    height: 80px;
     margin: 0 auto;
     max-width: 1000px;
   }
@@ -1001,9 +1001,9 @@ td, th {
   .nav-wrapper .primary-navigation ul li a,
   .nav-wrapper-mobile .primary-navigation ul li a {
     color: #454545;
-    padding: 25px 15px;
-    -webkit-transition: .1s all ease-in;
-            transition: .1s all ease-in;
+    padding: 30px 25px;
+    -webkit-transition: all ease-in-out 300ms;
+            transition: all ease-in-out 300ms;
   }
   .nav-wrapper .primary-navigation ul li a:hover,
   .nav-wrapper-mobile .primary-navigation ul li a:hover {
@@ -1199,6 +1199,26 @@ span i.material-icons {
   height: auto;
 }
 
+.special-button {
+  display: inline-block;
+  background: #473146;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 20px 50px;
+  border-radius: 0;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.special-button:hover {
+  background-color: #362434;
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+  transform: translate(0px, -10px) scale(1.2);
+}
+
 /**********************
  * Forside
  *********************/
@@ -1210,7 +1230,28 @@ span i.material-icons {
 @media only screen and (min-width: 803px) {
   .top-image {
     height: 450px;
+  }
+  .top-image .top-inside-wrap {
+    max-width: 1000px;
     position: relative;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .top-image .top-inside-wrap .top-phrase {
+    padding: 40px 15px;
+    font-size: 40px;
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  .top-image .top-inside-wrap .sup-phrase {
+    color: #fff;
+    font-size: 24px;
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+  .top-image .top-inside-wrap a {
+    padding: 20px 120px;
+    margin: 30px 15px;
   }
 }
 
@@ -1246,6 +1287,7 @@ span i.material-icons {
   font-size: 32px;
   font-size: 2rem;
   padding: 30px 0;
+  color: #454545;
 }
 .steps-wrap .step img {
   -webkit-align-self: center;
@@ -1257,6 +1299,7 @@ span i.material-icons {
   font-size: 1rem;
   width: 70%;
   margin: 0 auto;
+  color: #454545;
 }
 
 .text-vh-align {
@@ -1373,6 +1416,7 @@ span i.material-icons {
 .quote-users .user-quote {
   margin: 0 auto;
   max-width: 600px;
+  height: 100%;
 }
 .quote-users .user-quote blockquote {
   background-color: #fff;
