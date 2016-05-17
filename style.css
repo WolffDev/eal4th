@@ -984,6 +984,33 @@ td, th {
           align-items: center;
   padding: 0 15px;
 }
+@media only screen and (min-width: 803px) {
+  .nav-wrapper,
+  .nav-wrapper-mobile {
+    height: 70px;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  .nav-wrapper .primary-navigation ul,
+  .nav-wrapper-mobile .primary-navigation ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-wrapper .primary-navigation ul li a,
+  .nav-wrapper-mobile .primary-navigation ul li a {
+    color: #454545;
+    padding: 25px 15px;
+    -webkit-transition: .1s all ease-in;
+            transition: .1s all ease-in;
+  }
+  .nav-wrapper .primary-navigation ul li a:hover,
+  .nav-wrapper-mobile .primary-navigation ul li a:hover {
+    background-color: #362434;
+    color: #fff;
+  }
+}
 .nav-wrapper .header-mobile-logo,
 .nav-wrapper-mobile .header-mobile-logo {
   -webkit-box-flex: 2;
@@ -1053,6 +1080,13 @@ td, th {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.nav-wrapper-mobile .mobile-navigation ul li a:hover {
+  color: #fff;
+}
+.nav-wrapper-mobile .mobile-navigation ul li:hover {
+  color: #fff;
+  background-color: #362434;
 }
 
 /**********************
@@ -1172,6 +1206,57 @@ span i.material-icons {
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media only screen and (min-width: 803px) {
+  .top-image {
+    height: 450px;
+    position: relative;
+  }
+}
+
+.steps-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto;
+  padding: 15px 7.5px;
+  max-width: 1000px;
+}
+.steps-wrap .step {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33%;
+  padding: 0 7.5px;
+}
+.steps-wrap .step h2 {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 32px;
+  font-size: 2rem;
+  padding: 30px 0;
+}
+.steps-wrap .step img {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+.steps-wrap .step p {
+  font-size: 16px;
+  font-size: 1rem;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .text-vh-align {
