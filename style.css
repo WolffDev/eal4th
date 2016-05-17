@@ -1170,6 +1170,7 @@ span i.material-icons {
  *********************/
 .top-image {
   height: 300px;
+  width: 4000px;
   background-size: cover;
   background-repeat: no-repeat;
 }
