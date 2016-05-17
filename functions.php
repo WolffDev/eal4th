@@ -147,10 +147,21 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 	}
 }
 
+
+
+
+
+
 /**********************************************
  ******* wooCommerce Checkout ******
  *********************************************/
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+/**********************************************
+ ******* wooCommerce Shop Page ******
+ *********************************************/
+remove_action("woocommerce_before_shop_loop", "woocommerce_catalog_ordering", 30);
+
 
 /**********************************************
  ******* wooCommerce Single Product ******
@@ -159,6 +170,8 @@ remove_action( "woocommerce_before_single_product_summary", "woocommerce_show_pr
 remove_action("woocommerce_single_product_summary", "woocommerce_template_single_title", 5 );
 remove_action("woocommerce_single_product_summary", "woocommerce_template_single_meta", 40 );
 add_filter( "woocommerce_before_single_product_summary", "woocommerce_template_single_title", 5 );
+
+
 
 function woocommerce_template_product_description() {
    wc_get_template( 'single-product/tabs/description.php' );
@@ -259,6 +272,8 @@ function custom_override_checkout_fields( $fields ) {
 	unset($fields['billing']['billing_country']);
 	return $fields;
 }
+
+
 
 
 

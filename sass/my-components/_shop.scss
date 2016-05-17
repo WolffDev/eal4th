@@ -1,0 +1,48 @@
+.post-type-archive-product div.site-content {
+  h1 {
+    height: 50px;
+    background-color: $color__div_bg;
+    @include font-size(1.5);
+    padding: 13px 15px;
+  }
+  p.woocommerce-result-count {
+    padding: 15px;
+    margin: 0;
+  }
+}
+
+.woocommerce ul.products {
+  display: flex;
+  flex-flow: row wrap;
+  div.product {
+    width: 50%;
+    @include flex(row, wrao, space-between);
+    div.product-wrap {
+      width: 100%;
+      border: solid 7.5px #fff;
+      overflow: hidden;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+// Title and price
+.woocommerce ul.products {
+  div.product {
+    position: relative;
+    a h3 {
+      display: none;
+    }
+    span.price {
+      display: none;
+    }
+  }
+}
+.woocommerce ul.products div.product div.product-wrap a:last-child {
+  display: none;
+}
