@@ -10,7 +10,7 @@
     background-color: $color__text_white;
   // }
   .site-info {
-    padding: 40px 15px 0;
+    padding: 40px 15px 70px;
     p,a {
       @include font-size(1.3);
       color: $color__text_brod;

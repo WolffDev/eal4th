@@ -1683,6 +1683,11 @@ span i.material-icons {
   margin: 0 -15px 0;
   padding: 13px 15px;
 }
+@media only screen and (min-width: 803px) {
+  .woocommerce-billing-fields h3 {
+    margin: 0;
+  }
+}
 
 #customer_details input[type="text"],
 #customer_details input[type="email"],
@@ -1770,10 +1775,41 @@ span i.material-icons {
   font-size: 1.5rem;
   padding: 13px 15px;
 }
+@media only screen and (min-width: 803px) {
+  #order_review_heading {
+    margin: 0;
+  }
+}
 
 .woocommerce table.shop_table {
   border-radius: 0;
   margin: 15px 0;
+}
+
+@media only screen and (min-width: 803px) {
+  .woocommerce-checkout #customer_details {
+    margin-right: 7.5px;
+  }
+}
+@media only screen and (min-width: 803px) {
+  .woocommerce-checkout .order-review-wrap {
+    margin-left: 7.5px;
+  }
+}
+@media only screen and (min-width: 803px) {
+  .woocommerce-checkout .status-publish {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .woocommerce-checkout .status-publish form.woocommerce-checkout {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .woocommerce-checkout .status-publish form.woocommerce-checkout > div {
+    width: 50%;
+  }
 }
 
 .woocommerce-cart .entry-header {
@@ -1969,7 +2005,7 @@ span i.material-icons {
   }
 }
 .site-footer .site-info {
-  padding: 40px 15px 0;
+  padding: 40px 15px 70px;
 }
 .site-footer .site-info p, .site-footer .site-info a {
   font-size: 20.8px;

@@ -5,6 +5,9 @@
     @include font-size(1.5);
     margin: 0 -15px 0;
     padding: 13px 15px;
+    @media #{$large-and-up} {
+      margin: 0;
+    }
   }
 }
 
@@ -84,8 +87,36 @@
   margin: 0 -15px;
   @include font-size(1.5);
   padding: 13px 15px;
+  @media #{$large-and-up} {
+    margin: 0;
+  }
 }
 .woocommerce table.shop_table {
   border-radius: 0;
   margin: 15px 0;
+}
+
+.woocommerce-checkout {
+  #customer_details {
+    @media #{$large-and-up} {
+      margin-right: 7.5px;
+    }
+  }
+  .order-review-wrap {
+    @media #{$large-and-up} {
+      margin-left: 7.5px;
+    }
+  }
+  .status-publish {
+    @media #{$large-and-up} {
+      max-width: 1000px;
+      margin: 0 auto;
+      form.woocommerce-checkout {
+        display: flex;
+        > div {
+          width: 50%;
+        }
+      }
+    }
+  }
 }
