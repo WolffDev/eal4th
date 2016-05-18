@@ -1686,11 +1686,36 @@ span i.material-icons {
   background-color: #f0f0f0;
   margin: 0 -15px 0;
 }
+@media only screen and (min-width: 803px) {
+  .woocommerce-cart .entry-header {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+}
 .woocommerce-cart .entry-header h1 {
   font-size: 24px;
   font-size: 1.5rem;
   color: #454545;
   padding: 13px 15px;
+}
+@media only screen and (min-width: 803px) {
+  .woocommerce-cart .cart-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .woocommerce-cart .cart-wrapper .cart-collaterals {
+    width: 48%;
+    position: absolute;
+    top: 7px;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 803px) {
+  .woocommerce-cart .cart-wrapper .cart_item {
+    width: 48%;
+  }
 }
 .woocommerce-cart .cart-wrapper .product-name {
   width: 100%;
@@ -1763,9 +1788,21 @@ span i.material-icons {
   font-size: 24px;
   font-size: 1.5rem;
 }
+@media only screen and (min-width: 803px) {
+  .woocommerce-cart .cart-wrapper .cart_totals h2 {
+    font-size: 32px;
+    font-size: 2rem;
+    background-color: #fff;
+  }
+}
 .woocommerce-cart .cart-wrapper .wc-proceed-to-checkout a {
   background-color: #473146;
   border-radius: 0;
+}
+@media only screen and (min-width: 803px) {
+  .woocommerce-cart .cart-wrapper .wc-proceed-to-checkout a {
+    margin: 15px 0 0;
+  }
 }
 .woocommerce-cart .cart-wrapper .wc-proceed-to-checkout a:hover {
   background-color: #362434;
@@ -1774,6 +1811,12 @@ span i.material-icons {
   height: 15px;
   background-color: #eaeaea;
   margin: 0 -15px;
+}
+@media only screen and (min-width: 803px) {
+  .woocommerce-cart .cart-wrapper .diveder {
+    height: 0;
+    margin: 0;
+  }
 }
 
 .post-type-archive-product div.site-content h1 {

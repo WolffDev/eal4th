@@ -2,6 +2,11 @@
   .entry-header {
   background-color: $color__background_grey;
   margin: 0 -15px 0;
+  @media #{$large-and-up} {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
     h1 {
       @include font-size(1.5);
       color: $color__text_brod;
@@ -9,7 +14,21 @@
     }
   }
   .cart-wrapper {
+    @media #{$large-and-up} {
+      max-width: $desktop_width;
+      margin: 0 auto;
+      position: relative;
+      .cart-collaterals {
+        width: 48%;
+        position: absolute;
+        top: 7px;
+        right: 0;
+      }
+    }
     .cart_item {
+      @media #{$large-and-up} {
+        width: 48%;
+      }
     }
     .product-name {
       width: 100%;
@@ -72,10 +91,17 @@
       margin: 0 -15px 10px;
       padding: 0 15px;
       @include font-size(1.5);
+      @media #{$large-and-up} {
+        @include font-size(2);
+        background-color: #fff;
+      }
     }
     .wc-proceed-to-checkout a {
       background-color: $color__4;
       border-radius: 0;
+      @media #{$large-and-up} {
+        margin: 15px 0 0;
+      }
       &:hover {
         background-color: $color__5;
       }
@@ -84,6 +110,10 @@
       height: 15px;
       background-color: $color__div_bg;
       margin: 0 -15px;
+      @media #{$large-and-up} {
+        height: 0;
+        margin: 0;
+      }
     }
   }
 }
