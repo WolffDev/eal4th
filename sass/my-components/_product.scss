@@ -91,10 +91,29 @@
   }
 }
 
+.site-content {
+  div.type-product {
+    @media #{$large-and-up} {
+      display: flex;
+      margin: 0 auto;
+      max-width: $desktop_width;
+    }
+  }
+  div.single-product {
+    @media #{$large-and-up} {
+      width: 50%;
+    }
+  }
+}
 
-
-.woocommerce div.product .entry-summary > p {
-  @include font-size(1.3);
-  color: $color__text_brod;
-  padding-bottom: 15px;
+.woocommerce div.product div.summary {
+  @media #{$large-and-up} {
+    width: 50%;
+    padding: 70px 15px 7.5px
+  }
+  > p {
+    @include font-size(1.3);
+    color: $color__text_brod;
+    padding-bottom: 15px;
+  }
 }

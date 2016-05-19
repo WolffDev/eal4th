@@ -30,8 +30,21 @@ jQuery(document).ready(function($){
     }
   });
 
-  // Add class to desktop menu, for css effect
-  $('.nav-wrapper #menu-primaer > li').addClass('hvr-underline-from-center');
+  // Display info in shop on hover
+  $('.post-type-archive-product .product-wrap').on('mouseenter', function(){
+    $(this).find('a h3').css('display', 'inherit');
+    $(this).find('a .price').css('display', 'inherit');
+    $(this).find('a.add_to_cart_button').css('display', 'inherit');
+  });
+  $('.post-type-archive-product .product-wrap').on('mouseleave', function(){
+    $(this).find('a h3').css('display', 'none');
+    $(this).find('a .price').css('display', 'none');
+    $(this).find('a.add_to_cart_button').css('display', 'none');
+  });
+
+
+  // Add class to desktop nav-bar, for css effect
+  $('.nav-wrapper div ul.menu > li').addClass('hvr-underline-from-center');
 
   // Front page Call-To-Action button effect
   $('.btn-wrap').on('mouseenter', function(){

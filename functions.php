@@ -106,11 +106,6 @@ add_action( 'after_setup_theme', 'eal4th_content_width', 0 );
  *********************************************/
 
 if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
-	/**
-	 * Display Primary Navigation
-	 * @since  1.0.0
-	 * @return void
-	 */
 	function eal4th_primary_navigation() {
 		?>
 		<div class="hide-on-med-and-down">
@@ -154,11 +149,6 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 
 
 if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
-	/**
-	 * Display Primary Navigation
-	 * @since  1.0.0
-	 * @return void
-	 */
 	function eal4th_mobile_navigation() {
 		?>
 		<div class="hide-on-large-only">
@@ -389,8 +379,8 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 	add_filter( 'add_to_cart_fragments', 'eal4th_cart_link_fragment' );
 }
 
-add_action( 'eal4th_header', 'eal4th_primary_navigation',		50 );
-add_action( 'eal4th_mobile', 'eal4th_mobile_navigation',		50 );
+add_action( 'eal4th_header', 'eal4th_primary_navigation',		10 );
+add_action( 'eal4th_mobile', 'eal4th_mobile_navigation',		10 );
 // add_action( 'eal4th_header', 'eal4th_header_cart', 		50 );
 
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
