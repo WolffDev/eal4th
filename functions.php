@@ -116,6 +116,11 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 		<div class="hide-on-med-and-down">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="nav-wrapper">
+					<div class="header-mobile-logo">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php echo get_template_directory_uri() . '/img/logo-test.svg';?>" alt="header mobile logo">
+						</a>
+					</div>
 					<?php
 					wp_nav_menu(
 						array(
@@ -144,6 +149,84 @@ if ( ! function_exists( 'eal4th_primary_navigation' ) ) {
 			</nav><!-- #site-navigation -->
 		</div>
 		<?php
+	}
+}
+
+
+if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
+	/**
+	 * Display Primary Navigation
+	 * @since  1.0.0
+	 * @return void
+	 */
+	function eal4th_mobile_navigation() {
+		?>
+		<div class="hide-on-large-only">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="nav-wrapper-mobile">
+					<div class="header-mobile-logo">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php echo get_template_directory_uri() . '/img/logo-test.svg';?>" alt="header mobile logo">
+						</a>
+					</div>
+					<ul class="site-header-cart menu">
+						<li class="cart-short-list">
+							<?php eal4th_cart_link(); ?>
+							<ul class="cart-long-list">
+								<li>
+									<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<a href="#" id="menu-icon" data-activates="slide-out" class="button-collapse"><img src="<?php echo get_template_directory_uri() . '/img/menu-logo.svg';?>" alt="header mobile logo"></a>
+					<div id="slide-out" class="side-nav">
+						<a href="#"><i class="material-icons mobile-close">close</i></a>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location'	=> 'mobile',
+								'container_class'	=> 'mobile-navigation',
+								)
+						);
+						if ( is_cart() ) {
+							$class = 'current-menu-item';
+						} else {
+							$class = '';
+						}
+						?>
+					</div>
+				</div>
+			</nav><!-- #site-navigation -->
+		</div>
+		<?php
+	}
+}
+
+
+if ( ! function_exists( 'eal4th_cart_link' ) ) {
+	function eal4th_cart_link() {
+		?>
+			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'Vis din indkøbskurv', 'eal4th' ); ?>">
+
+				<span class="count "><?php echo wp_kses_data( sprintf( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?><i class="material-icons cart-icon">shopping_cart</i></span>
+
+			</a>
+		<?php
+	}
+}
+
+if ( ! function_exists( 'eal4th_cart_link_fragment' ) ) {
+	function eal4th_cart_link_fragment( $fragments ) {
+		global $woocommerce;
+
+		ob_start();
+
+		eal4th_cart_link();
+
+		$fragments['a.cart-contents'] = ob_get_clean();
+
+		return $fragments;
 	}
 }
 
@@ -282,82 +365,7 @@ function custom_override_checkout_fields( $fields ) {
 
 
 
-if ( ! function_exists( 'eal4th_mobile_navigation' ) ) {
-	/**
-	 * Display Primary Navigation
-	 * @since  1.0.0
-	 * @return void
-	 */
-	function eal4th_mobile_navigation() {
-		?>
-		<div class="hide-on-large-only">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="nav-wrapper-mobile">
-					<div class="header-mobile-logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<img src="<?php echo get_template_directory_uri() . '/img/logo-test.svg';?>" alt="header mobile logo">
-						</a>
-					</div>
-					<ul class="site-header-cart menu">
-						<li class="cart-short-list">
-							<?php eal4th_cart_link(); ?>
-							<ul class="cart-long-list">
-								<li>
-									<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<a href="#" id="menu-icon" data-activates="slide-out" class="button-collapse"><img src="<?php echo get_template_directory_uri() . '/img/menu-logo.svg';?>" alt="header mobile logo"></a>
-					<div id="slide-out" class="side-nav">
-						<a href="#"><i class="material-icons mobile-close">close</i></a>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location'	=> 'mobile',
-								'container_class'	=> 'mobile-navigation',
-								)
-						);
-						if ( is_cart() ) {
-							$class = 'current-menu-item';
-						} else {
-							$class = '';
-						}
-						?>
-					</div>
-				</div>
-			</nav><!-- #site-navigation -->
-		</div>
-		<?php
-	}
-}
 
-
-if ( ! function_exists( 'eal4th_cart_link' ) ) {
-	function eal4th_cart_link() {
-		?>
-			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'Vis din indkøbskurv', 'eal4th' ); ?>">
-				<span class="amount hide-on-med-and-down"><i class="material-icons">shopping_cart</i><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span>  <span class="count hide-on-med-and-down"> <?php echo wp_kses_data( sprintf( _n( '%d stk', '%d stk\'s', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?></span>
-				<span class="count hide-on-large-only"><?php echo wp_kses_data( sprintf( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count(), 'eal4th' ), WC()->cart->get_cart_contents_count() ) );?><i class="material-icons cart-icon">shopping_cart</i></span>
-
-			</a>
-		<?php
-	}
-}
-
-if ( ! function_exists( 'eal4th_cart_link_fragment' ) ) {
-	function eal4th_cart_link_fragment( $fragments ) {
-		global $woocommerce;
-
-		ob_start();
-
-		eal4th_cart_link();
-
-		$fragments['a.cart-contents'] = ob_get_clean();
-
-		return $fragments;
-	}
-}
 
 /* Currency */
 add_filter('woocommerce_currency_symbol', 'add_custom_danish_currency_symbol', 10, 2);
