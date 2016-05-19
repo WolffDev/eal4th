@@ -8,14 +8,22 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<?php $image_id = get_post_thumbnail_id(); $image_url = wp_get_attachment_image_src($image_id,'post', true); ?>
 
-		<div class="top-image" style="background-image: url(<?php echo $image_url[0];?>);">
-			<div class="top-inside-wrap hide-on-med-and-down">
-				<h1 class="top-phrase">Ét splitsekund er alt<br>du behøver</h1>
-				<h2 class="sup-phrase">Direkte overførelse af kunstværker,<br>nemt, bekvæmt & hurtig</h2>
-				<a href="#"class="special-button">Se værkerne</a>
-				<img src="<?php echo get_template_directory_uri() . '/img/header-overlay.png';?>" alt="Top image header overlay">
+		<div class="top-image-wrap">
+			<div class="top-image" style="background-image: url(<?php echo $image_url[0];?>);">
+				<div class="top-inside-wrap hide-on-med-and-down">
+					<div style="background-image: url(<?php echo get_template_directory_uri() . '/img/header-overlay.png';?>);height:550px;background-size:cover;">
+					</div>
+				</div>
+			</div>
+			<div class="phrase-wrap hide-on-med-and-down">
+				<div class="phrase-container">
+					<h1 class="top-phrase">Ét splitsekund er alt<br>du behøver</h1>
+					<h2 class="sub-phrase">Direkte overførelse af kunstværker,<br>nemt, bekvæmt & hurtig</h2>
+					<a href="#"class="special-button">Se værkerne</a>
+				</div>
 			</div>
 		</div>
+
 
 		<main id="frontpage" class="frontpage-wrapper" role="main">
 

@@ -30,8 +30,8 @@ jQuery(document).ready(function($){
     }
   });
 
-
-
+  // Add class to desktop menu, for css effect
+  $('.nav-wrapper #menu-primaer > li').addClass('hvr-underline-from-center');
 
 
 });
