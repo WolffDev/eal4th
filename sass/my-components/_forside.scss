@@ -34,11 +34,52 @@
     .top-phrase {
       @include font-size(3);
       color: $color__text_white;
-      padding: 40px 0 30px;
+      padding: 90px 0 50px;
     }
     .sub-phrase {
       color: $color__text_white;
-      padding-bottom: 30px;
+      padding-bottom: 50px;
+      @include font-size(1.5);
+    }
+  }
+}
+
+.btn-wrap {
+  height: 50px;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  .left {
+    position: absolute;
+    background: green;
+    height: 100%;
+    width: 100%;
+  }
+  .right {
+    position: absolute;
+    background: blue;
+    height: 50px;
+    width: 150px;
+    transform: skewx(-30deg);
+    right: -40px;
+    transition: all 800ms cubic-bezier(.5,-0.26,.5,1.26);
+  }
+  a {
+    position: absolute;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    padding: 9.5px 145px;
+    span {
+      position: absolute;
+      right: 25px;
+      top: 6px;
+      transition: all 800ms ease-in-out;
+      i {
+        color: #fff;
+        @include font-size(2.5);
+      }
     }
   }
 }

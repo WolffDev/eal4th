@@ -19,7 +19,11 @@ get_header(); ?>
 				<div class="phrase-container">
 					<h1 class="top-phrase">Ét splitsekund er alt<br>du behøver</h1>
 					<h2 class="sub-phrase">Direkte overførelse af kunstværker,<br>nemt, bekvæmt & hurtig</h2>
-					<a href="#"class="special-button">Se værkerne</a>
+					<div class="btn-wrap">
+						<div class="left"></div>
+						<div class="right"></div>
+						<a href="#">Se værkerne<span><i class="material-icons">arrow_forward</i></span></a>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1279,11 +1279,57 @@ span i.material-icons {
   font-size: 48px;
   font-size: 3rem;
   color: #fff;
-  padding: 40px 0 30px;
+  padding: 90px 0 50px;
 }
 .phrase-wrap .phrase-container .sub-phrase {
   color: #fff;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.btn-wrap {
+  height: 50px;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.btn-wrap .left {
+  position: absolute;
+  background: green;
+  height: 100%;
+  width: 100%;
+}
+.btn-wrap .right {
+  position: absolute;
+  background: blue;
+  height: 50px;
+  width: 150px;
+  -webkit-transform: skewx(-30deg);
+          transform: skewx(-30deg);
+  right: -40px;
+  -webkit-transition: all 800ms cubic-bezier(0.5, -0.26, 0.5, 1.26);
+          transition: all 800ms cubic-bezier(0.5, -0.26, 0.5, 1.26);
+}
+.btn-wrap a {
+  position: absolute;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  padding: 9.5px 145px;
+}
+.btn-wrap a span {
+  position: absolute;
+  right: 25px;
+  top: 6px;
+  -webkit-transition: all 800ms ease-in-out;
+          transition: all 800ms ease-in-out;
+}
+.btn-wrap a span i {
+  color: #fff;
+  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .steps-wrap {
