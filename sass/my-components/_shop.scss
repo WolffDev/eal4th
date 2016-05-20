@@ -1,12 +1,14 @@
 .post-type-archive-product div.site-content {
-  h1 {
-    height: 50px;
+  .shop-title-wrap {
     background-color: $color__div_bg;
-    @include font-size(1.5);
-    padding: 13px 15px;
-    @media #{$large-and-up} {
-      max-width: $desktop_width;
-      margin: 0 auto;
+    h1 {
+      height: 50px;
+      @include font-size(1.5);
+      padding: 13px 15px;
+      @media #{$large-and-up} {
+        max-width: $desktop_width;
+        margin: 0 auto;
+      }
     }
   }
   p.woocommerce-result-count {

@@ -2,15 +2,14 @@
   .entry-header {
   background-color: $color__background_grey;
   margin: 0 -15px 0;
-  @media #{$large-and-up} {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #fff;
-  }
     h1 {
       @include font-size(1.5);
       color: $color__text_brod;
       padding: 13px 15px;
+      @media #{$large-and-up} {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
     }
   }
   .cart-wrapper {

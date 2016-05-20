@@ -127,28 +127,8 @@
   min-height: 400px;
 }
 
-.abn-ref-link {
-  height: 120px;
-  background-image: url(img/test1.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 15px;
-  div {
-    height: 120px;
-  }
-  p {
-    @include font-size(1.4);
-    font-family: $font__bold;
-    position: relative;
-    color: $color__text_white;
-    @media #{$medium-only} {
-      @include font-size(2.1);
-    }
-  }
-}
-
 .user-select {
-  padding: 7.5px;
+  padding: 30px 7.5px 7.5px;
   @media #{$large-and-up} {
     background-color: $color__div_bg;
   }

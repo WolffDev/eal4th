@@ -49,14 +49,6 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<div class="abn-ref-link">
-				<a href="#">
-					<div class="text-vh-align">
-						<p>Se abonnementsløsninger</p>
-					</div>
-				</a>
-			</div>
-
 			<div class="user-select">
 				<div class="text-vh-align">
 					<p>
