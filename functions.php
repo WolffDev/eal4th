@@ -89,6 +89,10 @@ function eal4th_setup() {
 endif;
 add_action( 'after_setup_theme', 'eal4th_setup' );
 
+@ini_set( 'upload_max_size' , '20M' );
+@ini_set( 'post_max_size', '20M' );
+@ini_set( 'max_execution_time', '300' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -242,14 +246,14 @@ remove_action("woocommerce_before_shop_loop", "woocommerce_catalog_ordering", 30
 remove_action( "woocommerce_before_single_product_summary", "woocommerce_show_product_sale_flash", 10 );
 remove_action("woocommerce_single_product_summary", "woocommerce_template_single_title", 5 );
 remove_action("woocommerce_single_product_summary", "woocommerce_template_single_meta", 40 );
-add_filter( "woocommerce_before_single_product_summary", "woocommerce_template_single_title", 5 );
+add_filter( "woocommerce_before_single_product", "woocommerce_template_single_title", 5 );
 
 
 
 function woocommerce_template_product_description() {
    wc_get_template( 'single-product/tabs/description.php' );
  }
-add_filter( 'woocommerce_single_product_summary', 'woocommerce_template_product_description', 35 );
+add_filter( 'woocommerce_single_product_summary', 'woocommerce_template_product_description', 5 );
 
 function woocommerce_template_product_information() {
    wc_get_template( 'single-product/tabs/additional-information.php' );

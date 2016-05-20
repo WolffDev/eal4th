@@ -114,8 +114,6 @@ get_header(); ?>
 				<p>En flot plakat, en folieklædt væg, en t-shirt eller noget helt andet.</p>
 				<h2>Nu bestemmer du</h2>
 			</div>
-			<div class="divider"></div>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

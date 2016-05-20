@@ -53,3 +53,12 @@
 .woocommerce .woocommerce-error {
   border: 3px solid $color__error;
 }
+
+div.site-content article.type-page {
+  max-width: $desktop_width;
+  margin: 0 auto;
+  header h1 {
+    @include font-size(2);
+    margin: 20px 0;
+  }
+}

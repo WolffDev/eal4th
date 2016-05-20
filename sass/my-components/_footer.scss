@@ -1,14 +1,15 @@
 .site-footer {
-  width: 100vw;
-  @media #{$large-and-up} {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+  width: 100%;
   // background-color: $color__div_bg;
-  min-height: 250px;
   // @media #{$large-and-up} {
-    background-color: $color__text_white;
+    background-color: $color__background_grey;
   // }
+  .footer-wrap {
+    @media #{$large-and-up} {
+      max-width: 1000px;
+      margin: 60px auto 0;
+    }
+  }
   .site-info {
     padding: 40px 15px 70px;
     p,a {
@@ -16,7 +17,7 @@
       color: $color__text_brod;
     }
     .footer-mobile-logo img {
-      height: 50px;
+      height: 30px;
       margin: 10px 0;
     }
     a {

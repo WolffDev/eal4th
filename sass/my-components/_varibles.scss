@@ -9,7 +9,7 @@ $color__text_over: #000;
 $color__text_brod: #454545;
 $color__background_grey: #f0f0f0;
 $color__quotes: #8b8b8b;
-$color__link: crimson;
+$color__link: rgb(222, 135, 32);
 $color__div_bg: #eaeaea;
 $color__hover_button: $color__3;
 $color__nav_hover_center: #ddd;
@@ -26,7 +26,7 @@ $desktop_width: 1000px;
 @font-face {
   font-family: centuryGothic;
   src: url(fonts/century-gothic/century-gothic.ttf);
-  font-weight: 400;
+  font-weight: 100;
 }
 @font-face {
   font-family: centuryGothicBold;

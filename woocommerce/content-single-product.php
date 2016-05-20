@@ -20,20 +20,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+<div class="product-title-wrap">
+	<?php
+		/**
+		 * woocommerce_before_single_product hook.
+		 *
+		 * @hooked wc_print_notices - 10
+		 */
+		 do_action( 'woocommerce_before_single_product' );
 
-<?php
-	/**
-	 * woocommerce_before_single_product hook.
-	 *
-	 * @hooked wc_print_notices - 10
-	 */
-	 do_action( 'woocommerce_before_single_product' );
-
-	 if ( post_password_required() ) {
-	 	echo get_the_password_form();
-	 	return;
-	 }
-?>
+		 if ( post_password_required() ) {
+		 	echo get_the_password_form();
+		 	return;
+		 }
+	?>
+</div>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="single-product">

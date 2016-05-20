@@ -48,11 +48,11 @@ jQuery(document).ready(function($){
 
   // Front page Call-To-Action button effect
   $('.btn-wrap').on('mouseenter', function(){
-    $(this).find('.right').css({'width':'350px',"right":"-30px"});
+    $(this).find('.right').css({'width':'130px',"right":"-30px"});
     //$(this).find('span').css('transform','scale(1.5,1.5)');
   });
   $('.btn-wrap').on('mouseleave', function(){
-    $(this).find('.right').css({'width':'150px',"right":"-40px"});
+    $(this).find('.right').css({'width':'120px',"right":"-40px"});
     //$(this).find('span').css('transform','scale(1,1)');
   });
 
