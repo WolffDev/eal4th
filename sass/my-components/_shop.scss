@@ -59,6 +59,11 @@
       position: absolute;
       left: 10px;
       top: 200px;
+      @media #{$medium-and-down} {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+      }
     }
     span.price {
       display: none;
@@ -67,6 +72,11 @@
       position: absolute;
       left: 10px;
       top: 249px;
+      @media #{$medium-and-down} {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 60px;
+      }
     }
     a.add_to_cart_button {
       display: none;
@@ -128,6 +138,7 @@
         padding: 5px;
         background-color: $color__text_white;
         transform: rotate(-15deg);
+        @extend .z-depth-1;
       }
       a.add_to_cart_button {
         position: absolute;
