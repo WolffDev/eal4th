@@ -334,7 +334,7 @@ function isa_woo_cart_attributes($cart_item, $cart_item_key){
     echo $out;
 }
 
-add_filter( 'woocommerce_cart_item_price', 'isa_woo_cart_attributes', 10, 2 );
+add_filter( 'woocommerce_cart_item_price', 'isa_woo_cart_attributes', 10, 20 );
 
 
 

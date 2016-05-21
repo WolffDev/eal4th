@@ -155,7 +155,7 @@
 }
 
 /**********************
- * Nav header cart
+ * Nav header mini cart
  *********************/
 .site-header-cart {
   padding: 10px;
@@ -166,16 +166,20 @@ span i.material-icons {
 .cart-short-list {
   position: relative;
   a {
-    padding: 10px;
+
   }
 }
 .cart-long-list {
   display: none;
-}
-.inline-flex {
-  display: inline-flex;
+  .mini_cart_item {
+    width: 100%;
+    div.product-attri {
+      display: none;
+    }
+  }
 }
 
+// Cart icon hover menu
 .cart-hover {
   display: block;
   position: absolute;
@@ -183,7 +187,7 @@ span i.material-icons {
   right: 0;
   .widget_shopping_cart_content {
     background-color: $dropdown-bg-color;
-    min-width: 200px;
+    min-width: 300px;
     padding: 10px;
     @extend .z-depth-1;
     .total {
@@ -200,11 +204,11 @@ span i.material-icons {
     text-align: center;
     }
     a.remove, a.remove:before {
-        line-height: 1.618;
-        font-weight: 400;
     }
   }
 }
+
+//NavBar underline style
 .hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;
