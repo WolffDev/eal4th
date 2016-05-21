@@ -1249,11 +1249,11 @@ span i.material-icons {
   height: auto;
 }
 
-.woocommerce-account #customer_login form .form-row label {
+.woocommerce-account form p.form-row label {
   position: relative;
   left: 0;
 }
-.woocommerce-account #customer_login form .form-row input {
+.woocommerce-account form p.form-row input {
   border: 1px solid #eaeaea;
   padding-left: 15px;
   height: 40px;
@@ -1277,6 +1277,7 @@ span i.material-icons {
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 @media only screen and (min-width: 803px) {
   .top-image-wrap .top-image {
@@ -1931,10 +1932,6 @@ span i.material-icons {
   }
 }
 @media only screen and (min-width: 803px) {
-  .woocommerce-checkout .status-publish {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
   .woocommerce-checkout .status-publish form.woocommerce-checkout {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1952,7 +1949,6 @@ span i.material-icons {
 
 .woocommerce-cart .entry-header {
   background-color: #eaeaea;
-  margin: 0 -15px 0;
 }
 .woocommerce-cart .entry-header h1 {
   font-size: 24px;
@@ -2281,6 +2277,7 @@ span i.material-icons {
 }
 .entry-content .kontakt-wrap .kontakt-details .kontakt-detail img {
   padding: 10px 0 10px;
+  width: 200px;
 }
 .entry-content .kontakt-wrap .kontakt-details .kontakt-detail h3 {
   font-size: 24px;

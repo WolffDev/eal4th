@@ -109,8 +109,6 @@
   }
   .status-publish {
     @media #{$large-and-up} {
-      max-width: 1000px;
-      margin: 0 auto;
       form.woocommerce-checkout {
         display: flex;
         > div {

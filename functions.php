@@ -224,15 +224,87 @@ if ( ! function_exists( 'eal4th_cart_link_fragment' ) ) {
 	}
 }
 
+/**********************************************
+ ******* wooCommerce Exclude Product Kategory ******
+ *********************************************/
 
+add_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
 
+function custom_pre_get_posts_query( $q ) {
 
+	if ( ! $q->is_main_query() ) return;
+	if ( ! $q->is_post_type_archive() ) return;
+
+	if ( ! is_admin() && is_shop() ) {
+
+		$q->set( 'tax_query', array(array(
+			'taxonomy' => 'product_cat',
+			'field' => 'slug',
+			'terms' => array( 'abonnementer' ), // Don't display products in the knives category on the shop page
+			'operator' => 'NOT IN'
+		)));
+
+	}
+
+	remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
+
+}
+
+// set number of products shown on shop page
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
+/**********************************************
+ ******* wooCommerce add Abonnementer to shop page button ******
+ *********************************************/
+
+add_filter( 'woocommerce_after_shop_loop', 'add_abn_after_shop', 15 );
+function add_abn_after_shop() {
+	?>
+	<div class="abn-products">
+	<?php
+			$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'desc' );
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+
+					<h2>Shoes</h2>
+
+							<div class="abn-product">
+
+									<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+
+											<?php woocommerce_show_product_sale_flash( $post, $product ); ?>
+
+											<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?>
+
+											<h3><?php the_title(); ?></h3>
+
+											<span class="price"><?php echo $product->get_price_html(); ?></span>
+
+									</a>
+
+									<?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+
+							</div>
+
+	<?php endwhile; ?>
+	<?php wp_reset_query(); ?>
+</div><!--/.products-->
+
+	<?php
+}
 
 
 /**********************************************
  ******* wooCommerce Checkout ******
  *********************************************/
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+function wc_remove_related_products( $args ) {
+	return array();
+}
+add_filter( 'woocommerce_related_products_args','wc_remove_related_products', 10 );
+
 
 /**********************************************
  ******* wooCommerce Shop Page ******

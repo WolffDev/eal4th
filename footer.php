@@ -50,11 +50,11 @@
 			</div><!-- .site-info -->
 			<div class="site-info social-icons">
 				<ul>
-					<li><a href="#" class="facebook"></a></li>
-					<li><a href="#" class="instagram"></a></li>
+					<li><a href="https://www.facebook.com/arteawebshop" class="facebook"></a></li>
+					<li><a href="https://www.instagram.com/artea_denmark/" class="instagram"></a></li>
 					<li><a href="#" class="youtube"></a></li>
 					<li><a href="#" class="googleplus"></a></li>
-					<li><a href="#" class="pinterest"></a></li>
+					<li><a href="https://dk.pinterest.com/arteadenmark/" class="pinterest"></a></li>
 				</ul>
 			</div>
 		</div>

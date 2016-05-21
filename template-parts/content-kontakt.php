@@ -18,17 +18,17 @@
 		<div class="kontakt-wrap">
 			<div class="kontakt-details">
 				<div class="kontakt-detail">
-					<img src="#" alt="" />
-					<h3>Tlf: 3040 1020</h3>
+					<img src="<?php echo get_template_directory_uri() . '/img/phone.jpg';?>" alt="" />
+					<h3>30 40 10 20</h3>
 					<p>Du kan altid fange os på telefonen, indenfor vores åbningstider. Vi er altid klar på at tage en snak sammen med dig :-).</p>
 				</div>
 				<div class="kontakt-detail">
-					<img src="#" alt="" />
+					<img src="<?php echo get_template_directory_uri() . '/img/email.jpg';?>" alt="" />
 					<h3>info@artea.dk</h3>
 					<p>Vi forsøger at svare på al henvendelse hurtigst muligt, men vi garantere at svare indenfor 48 timer.</p>
 				</div>
 				<div class="kontakt-detail">
-					<img src="#" alt="" />
+					<img src="<?php echo get_template_directory_uri() . '/img/adresse.jpg';?>" alt="" />
 					<h3>Adresse</h3>
 					<p>Vi tager også imod post,<br>som du kan sende til:<br>Artea ApS<br>Kardemommegade 13 B<br>Transaktionsbyen 5100</p>
 				</div>
