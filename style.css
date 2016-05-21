@@ -2247,17 +2247,37 @@ span i.material-icons {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
 }
+@media only screen and (min-width: 803px) {
+  .entry-content .kontakt-wrap .kontakt-details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 .entry-content .kontakt-wrap .kontakt-details .kontakt-detail {
-  width: 30%;
+  width: 100%;
+}
+@media only screen and (min-width: 803px) {
+  .entry-content .kontakt-wrap .kontakt-details .kontakt-detail {
+    width: 30%;
+  }
 }
 .entry-content .kontakt-wrap .kontakt-details .kontakt-detail img {
   padding: 10px 0 10px;

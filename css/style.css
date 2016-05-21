@@ -2056,12 +2056,24 @@ span i.material-icons {
 }
 .entry-content .kontakt-wrap .kontakt-details {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   text-align: center;
 }
+@media only screen and (min-width: 803px) {
+  .entry-content .kontakt-wrap .kontakt-details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
 .entry-content .kontakt-wrap .kontakt-details .kontakt-detail {
-  width: 30%;
+  width: 100%;
+}
+@media only screen and (min-width: 803px) {
+  .entry-content .kontakt-wrap .kontakt-details .kontakt-detail {
+    width: 30%;
+  }
 }
 .entry-content .kontakt-wrap .kontakt-details .kontakt-detail img {
   padding: 10px 0 10px;
