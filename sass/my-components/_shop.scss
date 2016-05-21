@@ -101,3 +101,47 @@
     @include font-size(2);
   }
 }
+
+
+// Abonnemet, bottom of shop page
+.woocommerce-page .abn-products-wrap {
+  .header-wrap {
+    width: 100%;
+    background-color: $color__background_grey;
+    h1 {
+      @include font-size(1.5);
+      padding: 13px 15px;
+      max-width: $desktop_width;
+      margin: 0 auto;
+    }
+  }
+  .abn-products {
+    @include flex(row, wrap, space-around);
+    max-width: $desktop_width;
+    margin: 40px auto;
+    .abn-product {
+      position: relative;
+      a h3 {
+        position: absolute;
+        top: 46px;
+        left: 56px;
+        padding: 5px;
+        background-color: $color__text_white;
+        transform: rotate(-15deg);
+      }
+      a.add_to_cart_button {
+        position: absolute;
+        top: 224px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 20px;
+        border-radius: 0;
+        color: $color__text_white;
+        background-color: $color__link;
+        &:hover {
+          background-color: rgba($color__link, 0.8);
+        }
+      }
+    }
+  }
+}

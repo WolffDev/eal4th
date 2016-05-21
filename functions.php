@@ -259,34 +259,38 @@ add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
 add_filter( 'woocommerce_after_shop_loop', 'add_abn_after_shop', 15 );
 function add_abn_after_shop() {
 	?>
-	<div class="abn-products">
+	<div class="abn-products-wrap">
+		<div class="header-wrap">
+			<h1>Abonnementer</h1>
+		</div>
+		<div class="abn-products">
+
 	<?php
-			$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'desc' );
+			$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'rand' );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
-					<h2>Shoes</h2>
 
-							<div class="abn-product">
+						<div class="abn-product">
 
-									<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+								<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
-											<?php woocommerce_show_product_sale_flash( $post, $product ); ?>
+										<?php woocommerce_show_product_sale_flash( $post, $product ); ?>
 
-											<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?>
+										<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?>
 
-											<h3><?php the_title(); ?></h3>
+										<h3><?php the_title(); ?></h3>
 
-											<span class="price"><?php echo $product->get_price_html(); ?></span>
+								</a>
 
-									</a>
+								<?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
 
-									<?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
-
-							</div>
+						</div>
 
 	<?php endwhile; ?>
 	<?php wp_reset_query(); ?>
+</div>
+
 </div><!--/.products-->
 
 	<?php
