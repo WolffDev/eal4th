@@ -22,7 +22,7 @@ get_header(); ?>
 					<div class="btn-wrap">
 						<div class="left"></div>
 						<div class="right"></div>
-						<a href="#">Se værkerne<span><i class="material-icons">arrow_forward</i></span></a>
+						<a href="/shop">Se værkerne<span><i class="material-icons">arrow_forward</i></span></a>
 					</div>
 				</div>
 			</div>
@@ -30,7 +30,6 @@ get_header(); ?>
 
 
 		<main id="frontpage" class="frontpage-wrapper" role="main">
-
 			<div class="steps-wrap hide-on-med-and-down">
 				<div class="step">
 					<img src="<?php echo get_template_directory_uri() . '/img/step1.jpg';?>" alt="step 1 in process">

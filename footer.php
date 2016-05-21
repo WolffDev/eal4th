@@ -13,20 +13,20 @@
 
 	</div><!-- #content -->
 	<style>
-		.social-icons ul li a.facebook {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/facebook.png';?>);}
-		.social-icons ul li a.facebook:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/facebook-hover.png';?>);}
+		.social-icons ul li a.facebook {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/facebook.png';?>);}
+		.social-icons ul li a.facebook:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/facebook-hover.png';?>);}
 
-		.social-icons ul li a.instagram {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/instagram.png';?>);}
-		.social-icons ul li a.instagram:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/instagram-hover.png';?>);}
+		.social-icons ul li a.instagram {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/instagram.png';?>);}
+		.social-icons ul li a.instagram:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/instagram-hover.png';?>);}
 
-		.social-icons ul li a.youtube {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/youtube.png';?>);}
-		.social-icons ul li a.youtube:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/youtube-hover.png';?>);}
+		.social-icons ul li a.youtube {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/youtube.png';?>);}
+		.social-icons ul li a.youtube:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/youtube-hover.png';?>);}
 
-		.social-icons ul li a.pinterest {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/pinterest.png';?>);}
-		.social-icons ul li a.pinterest:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/pinterest-hover.png';?>);}
+		.social-icons ul li a.pinterest {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/pinterest.png';?>);}
+		.social-icons ul li a.pinterest:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/pinterest-hover.png';?>);}
 
-		.social-icons ul li a.googleplus {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/googleplus.png';?>);}
-		.social-icons ul li a.googleplus:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/32x32/googleplus-hover.png';?>);}
+		.social-icons ul li a.googleplus {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/googleplus.png';?>);}
+		.social-icons ul li a.googleplus:hover {background-image: url(<?php echo get_template_directory_uri() . '/img/social-icons/googleplus-hover.png';?>);}
 
 	</style>
 

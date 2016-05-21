@@ -7,14 +7,38 @@
 
 .content-area {
   width: 100%;
-}
-.site-main {
-  margin: 15px 15px;
+  .type-page {
+    .entry-header{
+      width: 100%;
+      background-color: $color__background_grey;
+      margin-bottom: 15px;
+      h1 {
+        @include font-size(1.5);
+        padding: 13px 15px;
+        @media #{$large-and-up} {
+          max-width: $desktop_width;
+          margin: 0 auto;
+        }
+      }
+    }
+    div.entry-content {
+      max-width: $desktop_width;
+      margin: 0 auto;
+      padding: 0 15px;
+      p strong {
+        font-family: $font__bold;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
 .woocommerce-account div#content {
   max-width: $desktop_width;
   margin: 0 auto;
 }
+
 
 /**********************
  * Vote gallery
@@ -52,13 +76,4 @@
 }
 .woocommerce .woocommerce-error {
   border: 3px solid $color__error;
-}
-
-div.site-content article.type-page {
-  max-width: $desktop_width;
-  margin: 0 auto;
-  header h1 {
-    @include font-size(2);
-    margin: 20px 0;
-  }
 }

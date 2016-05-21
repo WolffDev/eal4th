@@ -2,7 +2,6 @@
   .shop-title-wrap {
     background-color: $color__div_bg;
     h1 {
-      height: 50px;
       @include font-size(1.5);
       padding: 13px 15px;
       @media #{$large-and-up} {
