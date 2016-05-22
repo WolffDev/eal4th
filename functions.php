@@ -292,7 +292,7 @@ function add_abn_after_shop() {
 			<?php wp_reset_query(); ?>
 		</div>
 		<div class="abn-more-link">
-			<a href="/abonnementer">Læs mere om vores abonnement muligheder</a>
+			<a href="/abonnementer">Læs mere om vores abonnements muligheder</a>
 		</div>
 </div><!--/.products-->
 
