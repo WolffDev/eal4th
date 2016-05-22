@@ -265,10 +265,10 @@ function add_abn_after_shop() {
 		</div>
 		<div class="abn-products">
 
-	<?php
-			$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'rand' );
-			$loop = new WP_Query( $args );
-			while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+			<?php
+					$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'rand' );
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
 
 						<div class="abn-product">
@@ -288,10 +288,12 @@ function add_abn_after_shop() {
 
 						</div>
 
-	<?php endwhile; ?>
-	<?php wp_reset_query(); ?>
-</div>
-
+			<?php endwhile; ?>
+			<?php wp_reset_query(); ?>
+		</div>
+		<div class="abn-more-link">
+			<a href="/abonnementer">Læs mere om vores abonnement muligheder</a>
+		</div>
 </div><!--/.products-->
 
 	<?php

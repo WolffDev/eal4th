@@ -126,6 +126,23 @@ div.site-content article.page {
       margin: 0 auto;
     }
   }
+  .abn-more-link {
+    max-width: $desktop_width;
+    margin: 70px auto 120px;
+    text-align: center;
+    a {
+      padding: 13px 15px;
+      background-color: $color__link;
+      color: $color__text_white;
+      @include font-size(.8);
+      @media #{$large-and-up} {
+        @include font-size(1.3);
+      }
+      &:hover {
+        background-color: darken($color__link, 5);
+      }
+    }
+  }
   .abn-products {
     @include flex(row, wrap, space-around);
     max-width: $desktop_width;
