@@ -1184,6 +1184,10 @@ span i.material-icons {
   background-color: #fff;
 }
 
+#content {
+  min-height: 600px;
+}
+
 .content-area {
   width: 100%;
 }
@@ -2208,7 +2212,7 @@ div.site-content article.page .abn-more-link {
 .woocommerce-page .abn-products-wrap .abn-more-link a,
 div.site-content article.page .abn-more-link a {
   padding: 13px 15px;
-  background-color: #de8720;
+  background-color: #473146;
   color: #fff;
   font-size: 12.8px;
   font-size: 0.8rem;
@@ -2222,7 +2226,7 @@ div.site-content article.page .abn-more-link a {
 }
 .woocommerce-page .abn-products-wrap .abn-more-link a:hover,
 div.site-content article.page .abn-more-link a:hover {
-  background-color: #c8791d;
+  background-color: #362434;
 }
 .woocommerce-page .abn-products-wrap .abn-products,
 div.site-content article.page .abn-products {
@@ -2244,19 +2248,19 @@ div.site-content article.page .abn-products .abn-product {
   position: relative;
   width: 300px;
 }
-.woocommerce-page .abn-products-wrap .abn-products .abn-product:first-child,
-div.site-content article.page .abn-products .abn-product:first-child {
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
-}
-.woocommerce-page .abn-products-wrap .abn-products .abn-product:last-child,
-div.site-content article.page .abn-products .abn-product:last-child {
+.woocommerce-page .abn-products-wrap .abn-products .abn-product a[title="Lille abonnement"],
+div.site-content article.page .abn-products .abn-product a[title="Lille abonnement"] {
   -webkit-box-ordinal-group: 0;
   -webkit-order: -1;
       -ms-flex-order: -1;
           order: -1;
+}
+.woocommerce-page .abn-products-wrap .abn-products .abn-product a[title="Stor abonnement"],
+div.site-content article.page .abn-products .abn-product a[title="Stor abonnement"] {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a h3,
 div.site-content article.page .abn-products .abn-product a h3 {

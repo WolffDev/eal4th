@@ -250,6 +250,9 @@ function custom_pre_get_posts_query( $q ) {
 
 }
 
+
+
+
 // set number of products shown on shop page
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
 /**********************************************
@@ -266,7 +269,7 @@ function add_abn_after_shop() {
 		<div class="abn-products">
 
 			<?php
-					$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'desc' );
+					$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'asc' );
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
@@ -354,66 +357,74 @@ function hooks_close_div() {
     echo '</div>';
 }
 
+//Remove link from image on single product, to source product
+function custom_unlink_single_product_image( $html, $post_id ) {
+
+return get_the_post_thumbnail( $post_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
+
+}
+add_filter('woocommerce_single_product_image_html', 'custom_unlink_single_product_image', 10, 2);
+
 
 /**
 * WooCommerce: show all product attributes listed below each item on Cart page
 */
-function isa_woo_cart_attributes($cart_item, $cart_item_key){
-
-    $item_data = $cart_item_key['data'];
-    $attributes = $item_data->get_attributes();
-
-
-    if ( ! $attributes ) {
-        return $cart_item;
-    }
-
-    $out = $cart_item . '<br />';
-
-    foreach ( $attributes as $attribute ) {
-
-        if ( $attribute['is_taxonomy'] ) {
-
-        // skip variations
-            if ( $attribute['is_variation'] ) {
-                continue;
-            }
-
-            // backwards compatibility for attributes which are registered as taxonomies
-
-            $product_id = $item_data->id;
-            $terms = wp_get_post_terms( $product_id, $attribute['name'], 'all' );
-
-            // get the taxonomy
-            $tax = $terms[0]->taxonomy;
-
-            // get the tax object
-            $tax_object = get_taxonomy($tax);
-
-            // get tax label
-            if ( isset ($tax_object->labels->name) ) {
-                $tax_label = $tax_object->labels->name;
-            } elseif ( isset( $tax_object->label ) ) {
-                $tax_label = $tax_object->label;
-            }
-
-            foreach ( $terms as $term ) {
-                //$out .= $tax_label . ': ';
-                $out .= '<div class="product-attri">' . $term->name . '</div>';
-            }
-
-        } else {
-
-            // not a taxonomy
-
-            //$out .= $attribute['name'] . ': ';
-            $out .= $attribute['value'] . '<br />';
-        }
-    }
-    echo $out;
-}
-
-add_filter( 'woocommerce_cart_item_price', 'isa_woo_cart_attributes', 10, 20 );
+// function isa_woo_cart_attributes($cart_item, $cart_item_key){
+//
+//     $item_data = $cart_item_key['data'];
+//     $attributes = $item_data->get_attributes();
+//
+//
+//     if ( ! $attributes ) {
+//         return $cart_item;
+//     }
+//
+//     $out = $cart_item . '<br />';
+//
+//     foreach ( $attributes as $attribute ) {
+//
+//         if ( $attribute['is_taxonomy'] ) {
+//
+//         // skip variations
+//             if ( $attribute['is_variation'] ) {
+//                 continue;
+//             }
+//
+//             // backwards compatibility for attributes which are registered as taxonomies
+//
+//             $product_id = $item_data->id;
+//             $terms = wp_get_post_terms( $product_id, $attribute['name'], 'all' );
+//
+//             // get the taxonomy
+//             $tax = $terms[0]->taxonomy;
+//
+//             // get the tax object
+//             $tax_object = get_taxonomy($tax);
+//
+//             // get tax label
+//             if ( isset ($tax_object->labels->name) ) {
+//                 $tax_label = $tax_object->labels->name;
+//             } elseif ( isset( $tax_object->label ) ) {
+//                 $tax_label = $tax_object->label;
+//             }
+//
+//             foreach ( $terms as $term ) {
+//                 //$out .= $tax_label . ': ';
+//                 $out .= '<div class="product-attri">' . $term->name . '</div>';
+//             }
+//
+//         } else {
+//
+//             // not a taxonomy
+//
+//             //$out .= $attribute['name'] . ': ';
+//             $out .= $attribute['value'] . '<br />';
+//         }
+//     }
+//     echo $out;
+// }
+//
+// add_filter( 'woocommerce_cart_item_price', 'isa_woo_cart_attributes', 10, 20 );
 
 
 
