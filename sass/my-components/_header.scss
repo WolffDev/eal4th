@@ -17,7 +17,7 @@
   @media #{$large_and_up} {
     height: 80px;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: $desktop_width;
     .primary-navigation ul {
       display: flex;
       li {

@@ -9,7 +9,7 @@
     justify-content: space-between;
     padding: 0 15px;
     @media #{$large-and-up} {
-      max-width: 1000px;
+      max-width: $desktop_width;
       margin: 60px auto 0;
     }
   }

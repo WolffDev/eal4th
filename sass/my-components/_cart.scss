@@ -6,7 +6,7 @@
       color: $color__text_brod;
       padding: 13px 15px;
       @media #{$large-and-up} {
-        max-width: 1000px;
+        max-width: $desktop_width;
         margin: 0 auto;
       }
     }

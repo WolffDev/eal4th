@@ -219,7 +219,7 @@ td, th {
 }
 
 .z-depth-1, .side-nav, .cart-hover .widget_shopping_cart_content, .woocommerce-page .abn-products-wrap .abn-products .abn-product a h3,
-.page .abn-products-wrap .abn-products .abn-product a h3 {
+div.site-content article.page .abn-products .abn-product a h3 {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -2214,12 +2214,12 @@ span i.material-icons {
 }
 
 .woocommerce-page .abn-products-wrap .header-wrap,
-.page .abn-products-wrap .header-wrap {
+div.site-content article.page .header-wrap {
   width: 100%;
   background-color: #eaeaea;
 }
 .woocommerce-page .abn-products-wrap .header-wrap h1,
-.page .abn-products-wrap .header-wrap h1 {
+div.site-content article.page .header-wrap h1 {
   font-size: 24px;
   font-size: 1.5rem;
   padding: 13px 15px;
@@ -2227,7 +2227,7 @@ span i.material-icons {
   margin: 0 auto;
 }
 .woocommerce-page .abn-products-wrap .abn-products,
-.page .abn-products-wrap .abn-products {
+div.site-content article.page .abn-products {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2242,12 +2242,12 @@ span i.material-icons {
   margin: 40px auto;
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product,
-.page .abn-products-wrap .abn-products .abn-product {
+div.site-content article.page .abn-products .abn-product {
   position: relative;
   width: 300px;
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a h3,
-.page .abn-products-wrap .abn-products .abn-product a h3 {
+div.site-content article.page .abn-products .abn-product a h3 {
   position: absolute;
   top: 46px;
   left: 56px;
@@ -2257,7 +2257,7 @@ span i.material-icons {
           transform: rotate(-15deg);
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a.add_to_cart_button,
-.page .abn-products-wrap .abn-products .abn-product a.add_to_cart_button {
+div.site-content article.page .abn-products .abn-product a.add_to_cart_button {
   position: absolute;
   top: 224px;
   left: 50%;
@@ -2269,11 +2269,11 @@ span i.material-icons {
   background-color: #de8720;
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a.add_to_cart_button:hover,
-.page .abn-products-wrap .abn-products .abn-product a.add_to_cart_button:hover {
+div.site-content article.page .abn-products .abn-product a.add_to_cart_button:hover {
   background-color: rgba(222, 135, 32, 0.8);
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a p,
-.page .abn-products-wrap .abn-products .abn-product a p {
+div.site-content article.page .abn-products .abn-product a p {
   text-align: center;
   font-size: 14.4px;
   font-size: 0.9rem;
