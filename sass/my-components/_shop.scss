@@ -131,6 +131,7 @@
     margin: 40px auto;
     .abn-product {
       position: relative;
+      width: 300p;
       a h3 {
         position: absolute;
         top: 46px;
@@ -152,6 +153,10 @@
         &:hover {
           background-color: rgba($color__link, 0.8);
         }
+      }
+      a p {
+        text-align: center;
+        @include font-size(.9);
       }
     }
   }

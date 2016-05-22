@@ -943,7 +943,6 @@ td, th {
   list-style: none;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.3;
   color: #454545;
   font-smoothing: antialiased;
 }
@@ -1378,44 +1377,21 @@ span i.material-icons {
 }
 
 .user-select-wrapper {
-  display: flex;
+  line-height: 0;
+  column-count: 3;
+  column-gap: 15px;
 }
-@media only screen and (min-width: 803px) {
-  .user-select-wrapper {
-    background-color: #eaeaea;
-  }
+.user-select-wrapper a, .user-select-wrapper:before, .user-select-wrapper:after {
+  line-height: 0;
 }
-.user-select-wrapper .user-column {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+.user-select-wrapper img {
+  width: 100% !important;
+  height: auto !important;
+  line-height: 0;
+  padding-bottom: 15px;
 }
-@media only screen and (min-width: 803px) {
-  .user-select-wrapper .user-column {
-    margin: 0 auto;
-    max-width: 1000px;
-    background-color: #eaeaea;
-  }
-}
-.user-select-wrapper .user-column div {
-  width: 50%;
-  border: solid 7.5px #fff;
-  overflow: hidden;
-}
-@media only screen and (min-width: 803px) {
-  .user-select-wrapper .user-column div {
-    width: 33%;
-    border: solid 7.5px #eaeaea;
-  }
-}
-.user-select-wrapper .user-column div a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.user-select-wrapper .user-column div .hide {
-  display: none;
+.user-select-wrapper img:before, .user-select-wrapper img:after {
+  line-height: 0;
 }
 
 .quote-users {
@@ -2081,6 +2057,7 @@ span i.material-icons {
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product {
   position: relative;
+  width: 300p;
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a h3 {
   position: absolute;
@@ -2102,6 +2079,11 @@ span i.material-icons {
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a.add_to_cart_button:hover {
   background-color: rgba(222, 135, 32, 0.8);
+}
+.woocommerce-page .abn-products-wrap .abn-products .abn-product a p {
+  text-align: center;
+  font-size: 14.4px;
+  font-size: 0.9rem;
 }
 
 .entry-content .kontakt-wrap {
