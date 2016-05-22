@@ -114,7 +114,8 @@
 
 
 // Abonnemet, bottom of shop page
-.woocommerce-page .abn-products-wrap {
+.woocommerce-page .abn-products-wrap,
+.page .abn-products-wrap {
   .header-wrap {
     width: 100%;
     background-color: $color__background_grey;
@@ -131,7 +132,7 @@
     margin: 40px auto;
     .abn-product {
       position: relative;
-      width: 300p;
+      width: 300px;
       a h3 {
         position: absolute;
         top: 46px;
