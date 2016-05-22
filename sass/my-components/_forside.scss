@@ -88,16 +88,16 @@
 
 
 .steps-wrap {
-  display: flex;
+  @include flex(row, wrap, center);
   margin: 50px auto;
-  padding: 15px 7.5px;
   max-width: $desktop_width;
   .step {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
-    width: 33%;
+    width: 300px;
     padding: 0 7.5px;
+    margin-top: 40px;
     h2 {
       align-self: center;
       @include font-size(2);

@@ -266,7 +266,7 @@ function add_abn_after_shop() {
 		<div class="abn-products">
 
 			<?php
-					$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'rand' );
+					$args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'abonnementer', 'orderby' => 'desc' );
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 

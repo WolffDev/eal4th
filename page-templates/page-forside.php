@@ -30,7 +30,7 @@ get_header(); ?>
 
 
 		<main id="frontpage" class="frontpage-wrapper" role="main">
-			<div class="steps-wrap hide-on-med-and-down">
+			<div class="steps-wrap">
 				<div class="step">
 					<img src="<?php echo get_template_directory_uri() . '/img/step1.jpg';?>" alt="step 1 in process">
 					<h2>Find dit mortiv</h2>
