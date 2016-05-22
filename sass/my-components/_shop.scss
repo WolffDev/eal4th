@@ -50,7 +50,9 @@
 
 // Title and price
 .woocommerce ul.products {
+  padding: 0 15px;
   div.product div.product-wrap {
+    // line-height: 0;
     position: relative;
     a h3 {
       display: none;
@@ -58,7 +60,7 @@
       background-color: white;
       position: absolute;
       left: 10px;
-      top: 200px;
+      top: 195px;
       @media #{$medium-and-down} {
         left: 50%;
         transform: translateX(-50%);
@@ -71,7 +73,7 @@
       background-color: white;
       position: absolute;
       left: 10px;
-      top: 249px;
+      top: 244px;
       @media #{$medium-and-down} {
         left: 50%;
         transform: translateX(-50%);
@@ -83,8 +85,8 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, -50%);
-      top: 270px;
-      padding: 12px 30px;
+      top: 267px;
+      padding: 23px 27px;
       color: white;
       background-color: $color__link;
       border-radius: 0;
@@ -92,6 +94,9 @@
       &:hover {
         transition: all 300ms linear;
         background-color: rgba($color__link, .8);
+      }
+      &:after {
+        vertical-align: baseline;
       }
     }
     a.added_to_cart {

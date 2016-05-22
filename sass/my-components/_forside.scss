@@ -129,7 +129,7 @@
 }
 
 .user-select {
-  padding: 30px 7.5px 7.5px;
+  padding: 30px 15px 7.5px;
   @media #{$large-and-up} {
     background-color: $color__div_bg;
   }
@@ -144,10 +144,16 @@
     color: $color__text_over;
   }
 }
-.user-select-wrapper {
+.user-select-wrapper,
+.woocommerce-page .products {
   line-height: 0;
-  column-count: 3;
+  column-count: 2;
+  @media #{$large-and-up} {
+    column-count: 3;
+  }
   column-gap: 15px;
+  max-width: $desktop_width;
+  margin: 0 auto !important;
   a, &:before, &:after {
     line-height: 0;
   }
