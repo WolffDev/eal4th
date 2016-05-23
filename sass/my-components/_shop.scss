@@ -60,11 +60,12 @@
       background-color: white;
       position: absolute;
       left: 10px;
-      top: 195px;
+      bottom: 102px;
       @media #{$medium-and-down} {
         left: 50%;
         transform: translateX(-50%);
         top: 10px;
+        bottom: inherit;
       }
     }
     span.price {
@@ -73,11 +74,12 @@
       background-color: white;
       position: absolute;
       left: 10px;
-      top: 244px;
+      bottom: 42px;
       @media #{$medium-and-down} {
         left: 50%;
         transform: translateX(-50%);
         top: 60px;
+        bottom: inherit;
       }
     }
     a.add_to_cart_button {
@@ -85,7 +87,7 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, -50%);
-      top: 267px;
+      bottom: 19px;
       padding: 23px 27px;
       color: white;
       background-color: $color__link;

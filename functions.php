@@ -455,7 +455,7 @@ function custom_override_checkout_fields( $fields ) {
 add_filter('woocommerce_currency_symbol', 'add_custom_danish_currency_symbol', 10, 2);
 function add_custom_danish_currency_symbol( $currency_symbol, $currency ) {
      switch( $currency ) {
-          case 'DKK': $currency_symbol = 'kr.'; break;
+          case 'DKK': $currency_symbol = ' kr.'; break;
      }
      return $currency_symbol;
 }

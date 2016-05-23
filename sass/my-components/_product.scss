@@ -108,14 +108,15 @@
   }
 }
 
-.site-content {
-  div.type-product {
-    @media #{$large-and-up} {
-      display: flex;
-      margin: 0 auto;
-      max-width: $desktop_width;
-    }
+.single-product div.type-product {
+  @media #{$large-and-up} {
+    display: flex;
+    margin: 0 auto;
+    max-width: $desktop_width;
   }
+}
+
+.site-content {
   div.single-product {
     @media #{$large-and-up} {
       width: 50%;
