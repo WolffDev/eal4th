@@ -34,6 +34,14 @@
   }
   .header-mobile-logo {
     flex-grow: 2;
+    @media #{$medium-and-down} {
+      a {
+        position: absolute;
+        top: 7px;
+        padding: 10px;
+        left: 0;
+      }
+    }
     img {
       height: 35px;
     }
@@ -46,10 +54,22 @@
   display: inline-block;
   padding: 10px 0;
 }
+.main-navigation ul li.cart-short-list {
+  @media #{$medium-and-down} {
+    position: absolute;
+    right: 75px;
+  }
+}
 
 .nav-wrapper-mobile {
   #menu-icon {
     padding: 10px 0 10px 10px;
+    @media #{$medium-and-down} {
+      padding: 10px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
     img {
       height: 40px;
     }
@@ -63,23 +83,18 @@
     text-align: right;
   }
   .side-nav a {
-    height: 2rem;
+//    height: 2rem;
   }
   .mobile-navigation {
-    padding-top: 20px;
-    ul {
-      display: flex;
-      @include flex(column, wrap, space-around);
-      li a {
-        display: flex;
-        align-items: center;
-        &:hover {
-          color: $color__text_white;
-        }
+    margin-top: 20px;
+    ul li {
+      display: block;
+      width: 100%;
+      &:hover {
+        background-color: $color__4;
       }
-      li:hover {
+      a:hover {
         color: $color__text_white;
-        background-color: $color__5;
       }
     }
   }
@@ -126,7 +141,7 @@ span i.material-icons {
   right: 0;
   .widget_shopping_cart_content {
     background-color: $dropdown-bg-color;
-    min-width: 300px;
+    width: 300px;
     padding: 10px;
     @extend .z-depth-1;
     .total {

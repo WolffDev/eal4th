@@ -1013,6 +1013,15 @@ div.site-content article.page .abn-products .abn-product a h3 {
       -ms-flex-positive: 2;
           flex-grow: 2;
 }
+@media only screen and (max-width: 802px) {
+  .nav-wrapper .header-mobile-logo a,
+  .nav-wrapper-mobile .header-mobile-logo a {
+    position: absolute;
+    top: 7px;
+    padding: 10px;
+    left: 0;
+  }
+}
 .nav-wrapper .header-mobile-logo img,
 .nav-wrapper-mobile .header-mobile-logo img {
   height: 35px;
@@ -1027,8 +1036,23 @@ div.site-content article.page .abn-products .abn-product a h3 {
   padding: 10px 0;
 }
 
+@media only screen and (max-width: 802px) {
+  .main-navigation ul li.cart-short-list {
+    position: absolute;
+    right: 75px;
+  }
+}
+
 .nav-wrapper-mobile #menu-icon {
   padding: 10px 0 10px 10px;
+}
+@media only screen and (max-width: 802px) {
+  .nav-wrapper-mobile #menu-icon {
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
 }
 .nav-wrapper-mobile #menu-icon img {
   height: 40px;
@@ -1041,41 +1065,18 @@ div.site-content article.page .abn-products .abn-product a h3 {
 .nav-wrapper-mobile .side-nav > a {
   text-align: right;
 }
-.nav-wrapper-mobile .side-nav a {
-  height: 2rem;
-}
 .nav-wrapper-mobile .mobile-navigation {
-  padding-top: 20px;
+  margin-top: 20px;
 }
-.nav-wrapper-mobile .mobile-navigation ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: flex;
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+.nav-wrapper-mobile .mobile-navigation ul li {
+  display: block;
+  width: 100%;
 }
-.nav-wrapper-mobile .mobile-navigation ul li a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+.nav-wrapper-mobile .mobile-navigation ul li:hover {
+  background-color: #473146;
 }
 .nav-wrapper-mobile .mobile-navigation ul li a:hover {
   color: #fff;
-}
-.nav-wrapper-mobile .mobile-navigation ul li:hover {
-  color: #fff;
-  background-color: #362434;
 }
 
 /**********************
@@ -1118,7 +1119,7 @@ span i.material-icons {
 }
 .cart-hover .widget_shopping_cart_content {
   background-color: #fff;
-  min-width: 300px;
+  width: 300px;
   padding: 10px;
 }
 .cart-hover .widget_shopping_cart_content .total {
