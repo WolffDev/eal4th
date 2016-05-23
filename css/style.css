@@ -1677,6 +1677,10 @@ span i.material-icons {
   padding-bottom: 15px;
 }
 
+.woocommerce div.product div.images div.thumbnails {
+  width: 33%;
+}
+
 .woocommerce-billing-fields h3 {
   background-color: #eaeaea;
   height: 50px;
@@ -2098,19 +2102,20 @@ div.site-content article.page .abn-products .abn-product a[title="Stor abonnemen
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a h3,
 div.site-content article.page .abn-products .abn-product a h3 {
   position: absolute;
-  top: 46px;
-  left: 56px;
+  top: 36px;
+  left: 9px;
   padding: 5px;
   background-color: #fff;
-  transform: rotate(-15deg);
+  transform: rotate(-31deg);
 }
 .woocommerce-page .abn-products-wrap .abn-products .abn-product a.add_to_cart_button,
 div.site-content article.page .abn-products .abn-product a.add_to_cart_button {
-  position: absolute;
-  top: 224px;
+  position: inherit;
+  top: inherit;
   left: 50%;
+  margin: 20px 0 40px;
   transform: translateX(-50%);
-  padding: 12px 20px;
+  padding: 12px 30px;
   border-radius: 0;
   color: #fff;
   background-color: #de8720;

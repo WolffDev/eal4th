@@ -165,19 +165,20 @@ div.site-content article.page {
       width: 300px;
       a h3 {
         position: absolute;
-        top: 46px;
-        left: 56px;
+        top: 36px;
+        left: 9px;
         padding: 5px;
         background-color: $color__text_white;
-        transform: rotate(-15deg);
+        transform: rotate(-31deg);
         @extend .z-depth-1;
       }
       a.add_to_cart_button {
-        position: absolute;
-        top: 224px;
+        position: inherit;
+        top: inherit;
         left: 50%;
+        margin: 20px 0 40px;
         transform: translateX(-50%);
-        padding: 12px 20px;
+        padding: 12px 30px;
         border-radius: 0;
         color: $color__text_white;
         background-color: $color__link;

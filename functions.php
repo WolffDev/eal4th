@@ -503,7 +503,7 @@ add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 function eal4th_scripts() {
 	// wp_enqueue_style( 'eal4th-materialize-style' , get_template_directory_uri() . '/sass/materialize.css' );
 	wp_enqueue_style('woocommerce_css', plugins_url() .'/woocommerce/assets/css/woocommerce.css');
-	wp_enqueue_style( 'eal4th-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'eal4th-style', get_template_directory_uri() . '/style.min.css' );
 
 
 	// wp_enqueue_script( 'eal4th-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
