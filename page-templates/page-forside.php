@@ -67,9 +67,9 @@ get_header(); ?>
 
                     <?php echo get_the_post_thumbnail($loop->post->ID, 'custom-size-front'); ?>
 
-                    <!-- <h3 class="hide"><?php the_title(); ?></h3>
+                    <h3 class="user-select-price"><?php the_title(); ?></h3>
 
-                  	<span class="hide price"><?php // echo $product->get_price_html(); ?></span> -->
+                  	<!-- <span class="hide price"><?php // echo $product->get_price_html(); ?></span> -->
 
                   </a>
 

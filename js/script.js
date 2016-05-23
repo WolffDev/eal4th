@@ -42,6 +42,14 @@ jQuery(document).ready(function($){
     $(this).find('a.add_to_cart_button').css('display', 'none');
   });
 
+  //Display info on hover image frontpage
+  $('.home .user-select-wrapper .user-column div').on('mouseenter', function(){
+    $(this).find('.user-select-price').css('display', 'inherit');
+  });
+  $('.home .user-select-wrapper .user-column div').on('mouseleave', function(){
+    $(this).find('.user-select-price').css('display', 'none');
+  });
+
 
   // Add class to desktop nav-bar, for css effect
   $('.nav-wrapper div ul.menu > li').addClass('hvr-underline-from-center');

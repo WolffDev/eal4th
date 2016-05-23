@@ -968,27 +968,27 @@ div.site-content article.page .abn-products .abn-product a h3 {
 .nav-wrapper,
 .nav-wrapper-mobile {
   position: relative;
-  height: 60px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 72px;
   padding: 0 15px;
 }
 @media only screen and (min-width: 803px) {
   .nav-wrapper,
   .nav-wrapper-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 80px;
     margin: 0 auto;
     max-width: 1000px;
@@ -1020,13 +1020,6 @@ div.site-content article.page .abn-products .abn-product a h3 {
 .nav-wrapper .count,
 .nav-wrapper-mobile .count {
   color: #232323;
-}
-.nav-wrapper .dropdown-button,
-.nav-wrapper-mobile .dropdown-button {
-  color: #232323;
-  padding-left: 5px;
-  font-size: 40px;
-  font-size: 2.5rem;
 }
 
 .main-navigation ul li {
@@ -1461,6 +1454,18 @@ span i.material-icons {
   font-size: 25.6px;
   font-size: 1.6rem;
   color: #000;
+}
+.user-select .user-column > div {
+  position: relative;
+}
+.user-select .user-column > div .user-select-price {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #454545;
 }
 
 .user-select-wrapper,

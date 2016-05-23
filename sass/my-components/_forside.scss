@@ -143,6 +143,20 @@
     @include font-size(1.6);
     color: $color__text_over;
   }
+  .user-column {
+    > div {
+      position: relative;
+      .user-select-price {
+        display: none;
+        position: absolute;
+        bottom: 30px;
+        left: 10px;
+        padding: 10px 20px;
+        background-color: $color__text_white;
+        color: $color__text_brod;
+      }
+    }
+  }
 }
 .user-select-wrapper,
 .woocommerce-page .products {
