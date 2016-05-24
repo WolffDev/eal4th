@@ -8,31 +8,8 @@
  */
 
 if ( ! function_exists( 'eal4th_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
 function eal4th_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on eal4th, use a find and replace
-	 * to change 'eal4th' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'eal4th', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	//add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
 	add_theme_support( 'title-tag' );
 
 
@@ -41,11 +18,6 @@ function eal4th_setup() {
 	 */
 	add_theme_support( 'woocommerce' );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -54,37 +26,8 @@ function eal4th_setup() {
 		'mobile' => esc_html__( 'Mobil', 'eal4th' ),
 	) );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	// add_theme_support( 'html5', array(
-	// 	'search-form',
-	// 	'comment-form',
-	// 	'comment-list',
-	// 	'gallery',
-	// 	'caption',
-	// ) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	// add_theme_support( 'post-formats', array(
-	// 	'aside',
-	// 	'image',
-	// 	'video',
-	// 	'quote',
-	// 	'link',
-	// ) );
-
 	add_image_size( 'custom-size-front', 450, 350);
 
-	// Set up the WordPress core custom background feature.
-	// add_theme_support( 'custom-background', apply_filters( 'eal4th_custom_background_args', array(
-	// 	'default-color' => 'ffffff',
-	// 	'default-image' => '',
-	// ) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'eal4th_setup' );
@@ -366,67 +309,6 @@ return get_the_post_thumbnail( $post_id, apply_filters( 'single_product_large_th
 add_filter('woocommerce_single_product_image_html', 'custom_unlink_single_product_image', 10, 2);
 
 
-/**
-* WooCommerce: show all product attributes listed below each item on Cart page
-*/
-// function isa_woo_cart_attributes($cart_item, $cart_item_key){
-//
-//     $item_data = $cart_item_key['data'];
-//     $attributes = $item_data->get_attributes();
-//
-//
-//     if ( ! $attributes ) {
-//         return $cart_item;
-//     }
-//
-//     $out = $cart_item . '<br />';
-//
-//     foreach ( $attributes as $attribute ) {
-//
-//         if ( $attribute['is_taxonomy'] ) {
-//
-//         // skip variations
-//             if ( $attribute['is_variation'] ) {
-//                 continue;
-//             }
-//
-//             // backwards compatibility for attributes which are registered as taxonomies
-//
-//             $product_id = $item_data->id;
-//             $terms = wp_get_post_terms( $product_id, $attribute['name'], 'all' );
-//
-//             // get the taxonomy
-//             $tax = $terms[0]->taxonomy;
-//
-//             // get the tax object
-//             $tax_object = get_taxonomy($tax);
-//
-//             // get tax label
-//             if ( isset ($tax_object->labels->name) ) {
-//                 $tax_label = $tax_object->labels->name;
-//             } elseif ( isset( $tax_object->label ) ) {
-//                 $tax_label = $tax_object->label;
-//             }
-//
-//             foreach ( $terms as $term ) {
-//                 //$out .= $tax_label . ': ';
-//                 $out .= '<div class="product-attri">' . $term->name . '</div>';
-//             }
-//
-//         } else {
-//
-//             // not a taxonomy
-//
-//             //$out .= $attribute['name'] . ': ';
-//             $out .= $attribute['value'] . '<br />';
-//         }
-//     }
-//     echo $out;
-// }
-//
-// add_filter( 'woocommerce_cart_item_price', 'isa_woo_cart_attributes', 10, 20 );
-
-
 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 // Our hooked in function - $fields is passed via the filter!
@@ -441,16 +323,6 @@ function custom_override_checkout_fields( $fields ) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* Currency */
 add_filter('woocommerce_currency_symbol', 'add_custom_danish_currency_symbol', 10, 2);
 function add_custom_danish_currency_symbol( $currency_symbol, $currency ) {
@@ -460,12 +332,6 @@ function add_custom_danish_currency_symbol( $currency_symbol, $currency ) {
      return $currency_symbol;
 }
 
-// if ( ! function_exists( 'eal4th_header_cart' ) ) {
-// 	function eal4th_header_cart() {
-//
-//
-// 	}
-// }
 
 if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 	add_filter( 'woocommerce_add_to_cart_fragments', 'eal4th_cart_link_fragment' );
@@ -475,38 +341,13 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 
 add_action( 'eal4th_header', 'eal4th_primary_navigation',		10 );
 add_action( 'eal4th_mobile', 'eal4th_mobile_navigation',		10 );
-// add_action( 'eal4th_header', 'eal4th_header_cart', 		50 );
 
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-// function eal4th_widgets_init() {
-// 	register_sidebar( array(
-// 		'name'          => esc_html__( 'Sidebar', 'eal4th' ),
-// 		'id'            => 'sidebar-1',
-// 		'description'   => esc_html__( 'Add widgets here.', 'eal4th' ),
-// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-// 		'after_widget'  => '</section>',
-// 		'before_title'  => '<h2 class="widget-title">',
-// 		'after_title'   => '</h2>',
-// 	) );
-// }
-// add_action( 'widgets_init', 'eal4th_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
 function eal4th_scripts() {
-	// wp_enqueue_style( 'eal4th-materialize-style' , get_template_directory_uri() . '/sass/materialize.css' );
 	wp_enqueue_style('woocommerce_css', plugins_url() .'/woocommerce/assets/css/woocommerce.css');
 	wp_enqueue_style( 'eal4th-style', get_template_directory_uri() . '/style.min.css' );
-
-
-	// wp_enqueue_script( 'eal4th-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'eal4th-script', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
 
@@ -516,35 +357,8 @@ function eal4th_scripts() {
 
 	wp_enqueue_script( 'googleAnalytics', get_template_directory_uri() . '/js/googleAnalytics.js', array(), '20151215', true );
 
-	// wp_enqueue_script( 'eal4th-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	// 	wp_enqueue_script( 'comment-reply' );
-	// }
 }
 add_action( 'wp_enqueue_scripts', 'eal4th_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-// require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-// require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-// require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-// require get_template_directory() . '/inc/jetpack.php';

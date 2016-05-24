@@ -166,12 +166,8 @@ span i.material-icons {
 .hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
 }
@@ -184,11 +180,8 @@ span i.material-icons {
   bottom: 0;
   background: $color__nav_hover_center;
   height: 2px;
-  -webkit-transition-property: left, right;
   transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
